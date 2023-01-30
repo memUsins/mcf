@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head><meta charset='UTF-8'>
+
+<!-- Choices-js -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css' />
+<!-- pretty-checkbox -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
+<link rel='stylesheet' href='./../assets/css/index.css'>
+<!-- Data Picker -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
+<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!-- Useful meta tags -->
+<meta http-equiv='x-ua-compatible' content='ie=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<meta name='robots' content='index, follow'>
+<meta name='google' content='notranslate'>
+<meta name='format-detection' content='telephone=no'>
+<meta name='description' content=''>
+
+<title>Moscollector | Главная</title>
+
+</head>
+<body>
+
+<div id='root'>
+
+  <header class='shadow_default'>
+    <div class='header__wrapper'>
+      <div class='header_logo'>
+        <a href='./'>
+          <img src='../assets/images/logo.svg' alt='Sup'>
+        </a>
+      </div>
+  
+  
+      <div class='header_support block_row max_968'>
+        <div class='image_align'>
+          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <a href='help.html'>Техническая поддержка</a>
+        </div>
+  
+  
+        <div class='header__accordion image_justify'>
+          <div class='accordion accordion_absolute' data-acc='header'>
+            <img src='../assets/images/notification.svg' alt='notification'>
+            <span class='text_body2 text_blue_0 text_med accordion__open' data-acc='header'>ООО "ВАРДИ"</span>
+          </div>
+  
+          <div class='panel panel_absolute p0'>
+            <div class='card__wrapper card_column'>
+              <p class='text_note'>Владелец: -- --</p>
+              <p class='text_note'>Действительна: -- --</p>
+              <a href='my-agent.html' class='text_note'>Мои представители</a>
+            </div>
+          </div>
+        </div>
+  
+        <a href='ui-kit.html'>UI KIT</a>
+  
+        <div class='image_justify'>
+          <a href='auth-page.html'><p class='text_body2'>Выйти</p></a>
+          <img src='../assets/images/logout.svg' alt='logout'>
+        </div>
+      </div>
+      <div class='header__menu min_968'>
+  <!--      <img src='' alt=''>      -->
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <div class=' container'>
+    <div class='section section__side'>
+      <div class='sidebar'>
+        <div class='sidebar__breadcrumbs max_968'>
+          <p>Главная</p>
+        </div>
+        <div class='sidebar__icons-menu min_968'>
+          <a><img src='../assets/images/headphones.svg' alt='headphones'></a>
+          <a href='profile.html'><img src='../assets/images/profile__popUp.svg' alt='profile'></a>
+        </div>
+        <div class='accordion p0 mt_20' data-acc='sidebar'>
+          <div data-acc='sidebar' class='sidebar__accordion accordion__open'>
+            <img class='image_svg_25' src='../assets/images/employees.svg' alt='employees'>
+            <a>Сотрудники</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+        <div class='panel ml_20 p0'>
+          <a class='mt_15' href='all-employees.html'>Все сотрудники</a>
+          <a class='mt_10' href='employees-requests.html'>Все заявки на сотрудников</a>
+        </div>
+        <div class='sidebar__link mt_20'>
+          <img class='image_svg_25' src='../assets/images/tolerance.svg' alt='tolerances'>
+          <a href='pass.html'>Допуски</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/requests.svg' alt='sub-request'>
+          <a href='sub-request.html'>Запросы от подрядчиков</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/documents.svg' alt='documents'>
+          <a href='documents.html'>Документы</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/appeals.svg' alt='appeals'>
+          <a href='tickets.html'>Обращения</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/profile.svg' alt='profile'>
+          <a href='profile.html'>Учётные данные</a>
+        </div>
+        <div class='divider'></div>
+      
+        <div class='sidebar__buttons'>
+          <a href='add-pass-request.html'>
+            <button class='button button_blue text_body full-width text_note mt_20'>Новая заявка на ДОПУСК</button>
+          </a>
+          <a href='add-employees-requests.html'>
+            <button class='text_body2 button full-width p0 text_note mt_10'>Новая заявка на СОТРУДНИКОВ</button>
+          </a>
+        </div>
+      
+        <div class='sidebar__notification mt_40 max_968'>
+          <h2>Последние уведомления</h2>
+          <div class='image_align image_justify-end'>
+            <a href='notification.html'>Все сообщения</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+      </div>      
+      <div class='section__body full-width'>
+        <h1>Новая заявка на допуск</h1>
+      
+        <div class='card__wrapper input_block gap-0'>
+          <h3 class='text_body text_bold text_blue_0 m0'>Информация о составе работ</h3>
+      
+          <div class='alert block_row full-width align-end'>
+            <div class='input_block full-width'>
+              <label for='main'>Владелец коммуникации:</label>
+              <input type='text' name='main' id='main' placeholder='Введите название, ИНН или ОГРН организации'>
+            </div>
+      
+            <p class='mb_5 text_note text_med max_1024'>Если вы являетесь подрядчиком какой-либо организации, укажите эту организацию в
+              поле слева</p>
+      
+            <div class="alert__input alert__input_hint min_1024">
+              <img class="alert__view" src="../assets/images/message__picket.svg" alt="Error">
+              <div class="alert__block">
+                <div class="alert__info full-width">
+                  Если вы являетесь подрядчиком какой-либо организации, укажите эту организацию в поле слева
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class='block_row full-width align-end max_480_column'>
+            <div class='input_block full-width'>
+              <label>Вид работ</label>
+              <select
+                class='form-control'
+                name='custom-select'
+                id='custom-select'
+              >
+                <option value='Dropdown item 1'>Label One</option>
+                <option value='Dropdown item 2'>Label Two</option>
+                <option value='Dropdown item 3'>Label Three</option>
+              </select>
+            </div>
+      
+            <div class='input_block full-width'>
+              <label for='count_employee'>Введите количество сотрудников</label>
+              <input type='text' name='count_employee' id='count_employee'>
+            </div>
+          </div>
+      
+          <div class='input_block full-width'>
+            <label for='description'>Описание работ:</label>
+            <textarea name='description' id='description'></textarea>
+          </div>
+      
+          <div class='input_block'>
+            <div class='pretty p-default check_box check_box_big'>
+              <input type='checkbox' name='fireWork' />
+              <div class='state'>
+                <label>С проведением газосварочных или огневых работ</label>
+              </div>
+            </div>
+          </div>
+      
+          <div class='block_row full-width align-end max_640_column'>
+            <div class='input_block full-width'>
+              <label>Документ основание для проведения работ:</label>
+              <select
+                class='form-control'
+                name='type_doc'
+                id='custom-select1'
+              >
+                <option value='Dropdown item 1'>Label One</option>
+                <option value='Dropdown item 2'>Label Two</option>
+                <option value='Dropdown item 3'>Label Three</option>
+              </select>
+            </div>
+      
+            <div class='input_block full-width'>
+              <label for='number_doc'>Номер <br> документа</label>
+              <input type='text' name='number_doc' id='number_doc'>
+            </div>
+      
+            <div class='input_block full-width'>
+              <label for='date_doc'>Дата <br> документа</label>
+              <input type='date' name='date_doc' id='date_doc'>
+            </div>
+          </div>
+      
+          <!-- Место проведения работ -->
+      
+          <h3 class='text_body text_bold text_blue_0 mt_40 m0'>Место проведения работ и вид коммуникаций</h3>
+      
+          <div class='mt_20 full-width'>
+            <div class='collector block_column full-width alert'>
+            
+              <p class='delete text_note '>Удалить</p>
+            
+              <div class='block_column full-width mt_20'>
+                <!--    <div class='block_row '>-->
+                <!--    </div>-->
+            
+                <div class='block_row max_720_collector-edit align-end'>
+            
+                  <div class='input_block full-width m0 '>
+                    <label class=''>Вид коммуникации</label>
+                    <select
+                      class='form-control'
+                      name='type_doc'
+                      id='custom-select3'
+                    >
+                      <option value='Dropdown item 1'>Label One</option>
+                      <option value='Dropdown item 2'>Label Two</option>
+                      <option value='Dropdown item 3'>Label Three</option>
+                    </select>
+                  </div>
+            
+                  <div class='input_block m0 max_640_full-width'>
+                    <label class='word-break'>№ коммуникации</label>
+                    <input type='text' name='number_communication' id='number_communication'>
+                  </div>
+            
+                  <div class='input_block full-width m0'>
+                    <label class=''>Адресная привязка</label>
+                    <input type='text' name='address_communication' id='address_communication'>
+                  </div>
+                </div>
+              </div>
+            
+              <div class='block_row mt_20 gap-15 justify-start align-center max_480_column max_480_align-start'>
+                <label>Коллектор:</label>
+                <p class='text_note text_gray_100 text_bold'>Тверской Ямской 4-й, С. Кудринский, РЭК-1</p>
+              </div>
+            
+              <label class='mt_20'>Диапазоны пикетов</label>
+            
+              <div class='block_row full-width justify-start picket_gap max_640_column'>
+                <div class='input_block'>
+            
+                  <label>Основное тело коллектора:</label>
+                  <div class='block_row justify-start align-center gap-10 max_320_gap0'>
+                    <input class='picket' type='number' name='pk_start' value='0' required>
+                    <span class='mt_10'>—</span>
+                    <div class='last-input'>
+                      <input class='picket' type='number' name='pk_end' value='100' required>
+                      <span class='hidden separator'>,</span>
+                    </div>
+                    <span class='hidden remove'>x</span>
+                  </div>
+            
+                  <label class='mt_15'>+ Добавить еще один диапазон</label>
+                </div>
+            
+                <div class='input_block'>
+            
+                  <label>Галерея:</label>
+                  <div class='block_row justify-start align-center gap-10 max_320_gap0'>
+                    <input class='picket' type='number' name='pk_start' value='0' required>
+                    <span class='mt_10'>—</span>
+                    <div>
+                      <input class='picket' type='number' name='pk_end' value='100' required>
+                      <span class='hidden separator'>,</span>
+                    </div>
+                    <span class='hidden remove'>x</span>
+                  </div>
+            
+                  <label class='mt_15'>+ Добавить еще один диапазон</label>
+                </div>
+            
+              </div>
+            
+              <div class='alert image_align mt_20 max_640_column-align-start gap-10'>
+                <div>
+                  <img class='alert__view' src='../assets/images/message__picket.svg' alt='E'>
+            
+                  <div class='alert__block'>
+                    <div class='alert alert__info alert_top-left full-width'>
+                      Оставьте пустыми, если ключи не требуются
+                    </div>
+                  </div>
+                </div>
+            
+                <p class='text_note text_gray_0 text_med'>С выдачей ключей от <br> аварийных выходов:</p>
+            
+                <label class='maxw_110'>ПК аварийных <br> выходов</label>
+            
+                <div>
+                  <input class='picket m0' type='number' name='pk_emergency_exits' required>
+                  <span class='hidden separator'>,</span>
+                </div>
+            
+                <label class=''>+ Добавить еще один диапазон</label>
+              </div>
+            
+            </div>
+            
+            
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                new Choices('#custom-select3', {
+                  allowHTML: true,
+                  searchEnabled: false,
+                });
+              });
+            </script>    </div>
+      
+          <button class='button mt_5 button_svg mt_20' id='modal__open'>
+            <img src='../assets/images/choose__img.svg' alt='choose'>
+            <p class='text_blue_0 text_body2 text_bold'>Добавить коллектор</p>
+          </button>
+      
+          <div class='block_column mt_20 '>
+            <div class='block_row full-width justify-start'>
+              <label class='fit-content'>Дата проведения работ</label>
+              <label class='full-width ml_40'>Время проведения работ</label>
+            </div>
+      
+      
+            <div class='block_row full-width align-start max_640_column'>
+              <div class='block_column full-width'>
+                <div class='block_row full-width max_640_column align-center' id='date'>
+                  <div class='input_block full-width m0'>
+                    <input type='date' name='period_date' id='period_date'>
+                  </div>
+      
+                  <div class='input_block  m0'>
+                    <div class='block_row '>
+                      <input type='time' name='period_time_start' required=''>
+                      <input type='time' name='period_time_end' required=''>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+      
+              <div class='block_row align-center fit-content'>
+                <a class='mt_30 text_note text_gray_200 text_med'>+ Добавить еще одну дату</a>
+              </div>
+            </div>
+          </div>
+      
+          <div class='alert input_block full-width'>
+            <label>Разрешение проводить работы в выходные дни</label>
+      
+            <div class='image_align align-start mt_10'>
+              <div class='input_error'>
+                <img class=' alert__view' src='../assets/images/message__picket.svg' alt='E'>
+      
+                <div class='alert__block'>
+                  <div class='alert alert__info alert_top-left full-width'>
+                    Если работы планируются на выходной или праздничный день, обязательно приложите разрешение от руководства
+                    АО "Москоллектор"
+                  </div>
+                </div>
+              </div>
+      
+              <input type='file' name='file' id='file' class='input_file'>
+              <label for='file' class='text_body image_align mt_5'>
+                <img class='img__add__file' src='../assets/images/clip.svg'>
+                <span class='text_gray_200 text_note text_med'>Прикрепить документ</span>
+              </label>
+            </div>
+          </div>
+      
+      
+          <!-- Документ, подтверждающий -->
+      
+          <h3 class='text_body text_bold text_blue_0 mt_40 m0'>Документ, подтверждающий полномочия подписанта</h3>
+      
+          <div class='block_row full-width align-end max_640_column'>
+            <div class='input_block full-width'>
+              <label>Тип документа</label>
+              <select
+                class='form-control'
+                name='type_doc'
+                id='custom-select2'
+              >
+                <option value='Dropdown item 1'>Label One</option>
+                <option value='Dropdown item 2'>Label Two</option>
+                <option value='Dropdown item 3'>Label Three</option>
+              </select>
+            </div>
+      
+            <div class='input_block max_640_full-width'>
+              <label for='performerDocNumber'>Номер документа</label>
+              <input type='text' name='performerDocNumber' id='performerDocNumber'>
+            </div>
+      
+            <div class='input_block max_640_full-width'>
+              <label for='performerDocDate'>Дата документа</label>
+              <input type='date' name='performerDocDate' id='performerDocDate'>
+            </div>
+          </div>
+      
+          <div class='image_align mt_20'>
+            <input type='file2' name='file2' id='file2' class='input_file'>
+            <label for='file' class='text_body image_align mt_5'>
+              <img class='img__add__file' src='../assets/images/clip.svg'>
+              <span class='text_gray_200 text_note text_med'>Прикрепить документ</span>
+            </label>
+          </div>
+      
+          <div class='block_row full-width max_640_column'>
+            <div class='input_block full-width'>
+              <label for='performerFio'>Исполнитель</label>
+              <input type='text' name='performerFio' id='performerFio'>
+            </div>
+      
+            <div class='input_block max_640_full-width'>
+              <label for='performertel'>Контактный номер</label>
+              <input type='text' name='performertel' id='performertel'>
+            </div>
+          </div>
+      
+      
+        </div>
+      
+        <div class='button_block'>
+          <button class='button'>Отменить</button>
+          <div class='block_column gap-20'>
+            <button class='button button_blue'>Подать заявку</button>
+            <a class='text_body text_gray_200 text_bold'>Сохранить в черновик</a>
+          </div>
+        </div>
+      
+        <div class='modal__wrapper' id='modal'>
+          <div class='modal card__wrapper full-width card_max-w'>
+            <img class='modal__close' id='modal__close' src='../../assets/images/close.svg' alt='close'>
+        
+            <div class='modal__content'>
+              <div class='input_block'>
+                <label>Добавьте необходимый коллектор для посещения</label>
+                <input type='text' placeholder='Поиск коллектора или ДП по названию'>
+              </div>
+              
+              <div class='block_column collector mt_20'>
+                <p class='text_note text_gray_200'>Выбрать вообще всё..</p>
+              
+                <div class='header__accordion block_column mt_20'>
+                  <div class='accordion image_align' data-acc='collector'>
+                    <div class='accordion__open image_align' data-acc='collector'>
+                      <img src='../assets/images/arrow__dropDown__kollektors.svg' alt='arrow'>
+                      <span class='text_body text_blue_0 text_med'>РЭК-1</span>
+                    </div>
+              
+                    <span class='text_note  max_380'>Выбрать всё..</span>
+                  </div>
+              
+                  <div class='panel ml_20 mt_20'>
+                    <div class='accordion image_align' data-acc='collector_sub'>
+                      <div class='accordion__open image_align' data-acc='collector_sub'>
+                        <img src='../assets/images/arrow__dropDown__kollektors.svg' alt='arrow'>
+                        <span class='text_body text_gray_100 text_med'>С. Кудринский</span>
+                      </div>
+                      <span class='text_note text_gray_200 max_380'>Выбрать всё..</span>
+                    </div>
+              
+                    <div class='panel ml_20 mt_20'>
+                      <div class='collector__name image_align active'>
+                        <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
+                        <p class='text_body2 text_blue_100 text_med'>Тверской Ямской 4-й</p>
+                      </div>
+              
+                      <div class='collector__name image_align'>
+                        <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
+                        <p class='text_body2 text_blue_100 text_med'>Фучика</p>
+                      </div>
+              
+                      <div class='collector__name image_align'>
+                        <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
+                        <p class='text_body2 text_blue_100 text_med'>Площадь Восстания</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>    </div>
+        
+            <div class='modal__menu block_row align-center full-width'>
+              <button class='button'>Отменить</button>
+              <button class='button button_blue'>Применить</button>
+            </div>
+          </div>
+        </div></div>
+      
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          new Choices('#custom-select1', {
+            allowHTML: true,
+            searchEnabled: false,
+          });
+        });
+      </script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          new Choices('#custom-select2', {
+            allowHTML: true,
+            searchEnabled: false,
+          });
+        });
+      </script>
+    </div>
+  </div>
+
+  <footer>
+    <div class='footer__wrapper'>
+  
+      <div class='footer__info text_body'>
+        <div class='footer__logo__social'>
+          <div class='footer__logo'>
+            <img src='../assets/images/logo__footer.svg' alt='logoImg'>
+          </div>
+          <div class='footer__social image_align'>
+            <img src='../assets/images/vk.svg' alt='vkImg'>
+            <img src='../assets/images/telegram.svg' alt='telegram'>
+          </div>
+        </div>
+  
+        <div class='footer__contacts'>
+          <ul>
+            <li class='footer__contacts__location image_align'>
+              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
+            </li>
+            <li class='footer__contacts__phone image_align'>
+              <img src='../assets/images/phone.svg' alt='phoneImg'>
+              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+            </li>
+            <li class='footer__contacts__mail image_align'>
+              <img src='../assets/images/mail.svg' alt='mailImg'>
+              <span class='text_bold'>info@moscollector.ru</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class='footer__work-time image_justify'>
+          <div class='footer__work-time__img'>
+            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+          </div>
+          <ul>
+            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
+            <li>Пятница: <span>8:00 -15:45</span></li>
+            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class='footer__rights'>
+          <span class='text_body'>© 2022 АО «Москоллектор»</span>
+          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+      </div>
+  
+    </div>
+  </footer>
+</div>
+
+<script src='./../assets/js/app.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
+<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+
+</body>
+</html>

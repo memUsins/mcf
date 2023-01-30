@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head><meta charset='UTF-8'>
+
+<!-- Choices-js -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css' />
+<!-- pretty-checkbox -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
+<link rel='stylesheet' href='./../assets/css/index.css'>
+<!-- Data Picker -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
+<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!-- Useful meta tags -->
+<meta http-equiv='x-ua-compatible' content='ie=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<meta name='robots' content='index, follow'>
+<meta name='google' content='notranslate'>
+<meta name='format-detection' content='telephone=no'>
+<meta name='description' content=''>
+
+<title>Moscollector | Главная</title>
+
+</head>
+<body>
+
+<div id='root'>
+
+  <header class='shadow_default'>
+    <div class='header__wrapper'>
+      <div class='header_logo'>
+        <a href='./'>
+          <img src='../assets/images/logo.svg' alt='Sup'>
+        </a>
+      </div>
+  
+  
+      <div class='header_support block_row max_968'>
+        <div class='image_align'>
+          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <a href='help.html'>Техническая поддержка</a>
+        </div>
+  
+  
+        <div class='header__accordion image_justify'>
+          <div class='accordion accordion_absolute' data-acc='header'>
+            <img src='../assets/images/notification.svg' alt='notification'>
+            <span class='text_body2 text_blue_0 text_med accordion__open' data-acc='header'>ООО "ВАРДИ"</span>
+          </div>
+  
+          <div class='panel panel_absolute p0'>
+            <div class='card__wrapper card_column'>
+              <p class='text_note'>Владелец: -- --</p>
+              <p class='text_note'>Действительна: -- --</p>
+              <a href='my-agent.html' class='text_note'>Мои представители</a>
+            </div>
+          </div>
+        </div>
+  
+        <a href='ui-kit.html'>UI KIT</a>
+  
+        <div class='image_justify'>
+          <a href='auth-page.html'><p class='text_body2'>Выйти</p></a>
+          <img src='../assets/images/logout.svg' alt='logout'>
+        </div>
+      </div>
+      <div class='header__menu min_968'>
+  <!--      <img src='' alt=''>      -->
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <div class=' container'>
+    <div class='section section__side'>
+      <div class='sidebar'>
+        <div class='sidebar__breadcrumbs max_968'>
+          <p>Главная</p>
+        </div>
+        <div class='sidebar__icons-menu min_968'>
+          <a><img src='../assets/images/headphones.svg' alt='headphones'></a>
+          <a href='profile.html'><img src='../assets/images/profile__popUp.svg' alt='profile'></a>
+        </div>
+        <div class='accordion p0 mt_20' data-acc='sidebar'>
+          <div data-acc='sidebar' class='sidebar__accordion accordion__open'>
+            <img class='image_svg_25' src='../assets/images/employees.svg' alt='employees'>
+            <a>Сотрудники</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+        <div class='panel ml_20 p0'>
+          <a class='mt_15' href='all-employees.html'>Все сотрудники</a>
+          <a class='mt_10' href='employees-requests.html'>Все заявки на сотрудников</a>
+        </div>
+        <div class='sidebar__link mt_20'>
+          <img class='image_svg_25' src='../assets/images/tolerance.svg' alt='tolerances'>
+          <a href='pass.html'>Допуски</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/requests.svg' alt='sub-request'>
+          <a href='sub-request.html'>Запросы от подрядчиков</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/documents.svg' alt='documents'>
+          <a href='documents.html'>Документы</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/appeals.svg' alt='appeals'>
+          <a href='tickets.html'>Обращения</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/profile.svg' alt='profile'>
+          <a href='profile.html'>Учётные данные</a>
+        </div>
+        <div class='divider'></div>
+      
+        <div class='sidebar__buttons'>
+          <a href='add-pass-request.html'>
+            <button class='button button_blue text_body full-width text_note mt_20'>Новая заявка на ДОПУСК</button>
+          </a>
+          <a href='add-employees-requests.html'>
+            <button class='text_body2 button full-width p0 text_note mt_10'>Новая заявка на СОТРУДНИКОВ</button>
+          </a>
+        </div>
+      
+        <div class='sidebar__notification mt_40 max_968'>
+          <h2>Последние уведомления</h2>
+          <div class='image_align image_justify-end'>
+            <a href='notification.html'>Все сообщения</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+      </div>      
+      <div class='section__body full-width'>
+        <div class='align-center button_block max_480_column max_480-ticket'>
+          <h1 class='m0 word-break'>Все обращения</h1>
+          <a href='new-ticket.html'>
+      
+            <button class='m0 button button_svg'>
+              <img src='../assets/images/new__appeal.svg' alt='new__appeal'>
+              <span class='text_blue_0'>Создать обращение</span>
+            </button>
+          </a>
+      
+        </div>
+      
+        <div class='table__wrapper'>
+          <table>
+            <thead>
+            <tr>
+              <th class='th_50'>
+                <div class='pretty pretty_line-default p-default check_box check_box-center'>
+                  <input type='checkbox' />
+                  <div class='state'>
+                    <label class='text_gray_100'></label>
+                  </div>
+                </div>
+              </th>
+      
+              <th class='th_400'>
+                <div class='th_text th_text_2'>
+                  <p class='text_center'>Тема запроса</p>
+                  <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+                </div>
+              </th>
+      
+              <th class='th_150'>
+                <div class='th_text th_text_2'>
+                  <p>Статус</p>
+                  <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+                </div>
+              </th>
+      
+              <th class='th_200'>
+                <div class='th_text  th_text_2'>
+                  <p class='text_center'>Дата создания</p>
+                  <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+                </div>
+              </th>
+      
+              <th class='th_200'>
+                <div class='th_text th_text_center th_text_2'>
+                  <p class='text_center'>Дата изменения</p>
+                  <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+                </div>
+              </th>
+            </tr>
+            </thead>
+      
+            <tbody>
+            <tr>
+              <td class='vertical-top text_center'>
+                <div class='pretty p-default pretty_line-default check_box check_box-center mt_5'>
+                  <input type='checkbox' />
+                  <div class='state'>
+                    <label class='text_gray_100'></label>
+                  </div>
+                </div>
+              </td>
+      
+              <td>
+                <a href='ticket-view.html' class='text_blue_0'>Вопрос по заявке на оформление...</a>
+                <p class='mt_10'>Оформления допуска для выполнения работ по гидроизоляции, ремонту, реконструкции коллектора,
+                  мониторингу строительных конструкций и т.д.</p>
+              </td>
+      
+              <td class='text_center'>
+                <p class='status status_agreed'>Новое</p>
+              </td>
+      
+              <td>
+                <p class='text_center'>c 2022-11-09 18:44:52</p>
+              </td>
+      
+              <td>
+                <p class='text_center'>2022-12-06 15:06:08</p>
+              </td>
+            </tr>
+      
+            </tbody>
+            <div class='menu'>
+              <div class='menu__label'>
+                <button class='button button_svg p' >
+                  <p class='text_body2 menu__open'>Выберите действие</p>
+                  <img class="menu__img" src="../assets/images/arrow__up.svg" alt="arrow">
+                </button>
+              </div>
+              <div class='menu__items card__wrapper'>
+                <p class='text_note'>Действие 1</p>
+                <p class='divider'></p>
+                <p class='text_note'>Действие 2</p>
+                <p class='divider'></p>
+                <p class='text_note'>Действие 3</p>
+                <p class='divider'></p>
+                <p class='text_note'>Действие 4</p>
+              </div>
+            </div>
+          </table>
+        </div>
+      
+        <div class='pagination block_row'>
+          <button class='button button_blue button_pagination'>1</button>
+          <button class='button button_pagination'>2</button>
+          <button class='button button_pagination'>3</button>
+          <button class='button button_svg button_pagination'>
+            <img src='../assets/images/pagination__img__right.svg' alt='arrow'>
+          </button>
+        </div>
+        <div class='modal__wrapper' id='modal'>
+          <div class='modal card__wrapper card_500x300'>
+            <img class='modal__close' id='modal__close' src='../../assets/images/close.svg' alt='close'>
+        
+            <div class='modal__content'>
+              <div class='mt_40 input_block'>
+                <label>Пропуск заблокирован?</label>
+                <select
+                  class='form-control'
+                  name='custom-select'
+                  id='modal-select'
+                >
+                  <option value='Dropdown item 1'>Не выбрано</option>
+                  <option value='Dropdown item 2'>Нет</option>
+                  <option value='Dropdown item 3'>Да</option>
+                </select>
+              </div>
+            </div>
+        
+            <div class='modal__menu'>
+              <div class='button_block'>
+                <button class='button full-width'>Отменить</button>
+                <button class='button button_blue full-width'>Применить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            new Choices('#modal-select', {
+              allowHTML: true,
+              searchEnabled: false,
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class='footer__wrapper'>
+  
+      <div class='footer__info text_body'>
+        <div class='footer__logo__social'>
+          <div class='footer__logo'>
+            <img src='../assets/images/logo__footer.svg' alt='logoImg'>
+          </div>
+          <div class='footer__social image_align'>
+            <img src='../assets/images/vk.svg' alt='vkImg'>
+            <img src='../assets/images/telegram.svg' alt='telegram'>
+          </div>
+        </div>
+  
+        <div class='footer__contacts'>
+          <ul>
+            <li class='footer__contacts__location image_align'>
+              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
+            </li>
+            <li class='footer__contacts__phone image_align'>
+              <img src='../assets/images/phone.svg' alt='phoneImg'>
+              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+            </li>
+            <li class='footer__contacts__mail image_align'>
+              <img src='../assets/images/mail.svg' alt='mailImg'>
+              <span class='text_bold'>info@moscollector.ru</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class='footer__work-time image_justify'>
+          <div class='footer__work-time__img'>
+            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+          </div>
+          <ul>
+            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
+            <li>Пятница: <span>8:00 -15:45</span></li>
+            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class='footer__rights'>
+          <span class='text_body'>© 2022 АО «Москоллектор»</span>
+          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+      </div>
+  
+    </div>
+  </footer>
+</div>
+
+<script src='./../assets/js/app.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
+<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+
+</body>
+</html>

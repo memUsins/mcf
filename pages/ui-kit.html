@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head><meta charset='UTF-8'>
+
+<!-- Choices-js -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css' />
+<!-- pretty-checkbox -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
+<link rel='stylesheet' href='./../assets/css/index.css'>
+<!-- Data Picker -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
+<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!-- Useful meta tags -->
+<meta http-equiv='x-ua-compatible' content='ie=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<meta name='robots' content='index, follow'>
+<meta name='google' content='notranslate'>
+<meta name='format-detection' content='telephone=no'>
+<meta name='description' content=''>
+
+<title>UI Kit</title>
+
+</head>
+<body class='sign_in'>
+
+<div id='root' class='sign_in'>
+  <header class='shadow_default'>
+    <div class='header__wrapper'>
+      <div class='header_logo'>
+        <a href='./'>
+          <img src='../assets/images/logo.svg' alt='Sup'>
+        </a>
+      </div>
+      <div class='header_support block_row'>
+        <div class='image_align'>
+          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <a href='' class='openModal'>Техническая поддержка</a>
+        </div>
+  
+        <a href='ui-kit.html'>UI KIT</a>
+      </div>
+    </div>
+  </header>
+
+  <div style='padding: 20px;'>
+    <!-- UI Inputs -->
+    <div class='input_block'>
+      <label for='text'>Просто поле</label>
+      <input type='text' name='text' id='text' placeholder='Placeholder'>
+    </div>
+    
+    <div class='input_block'>
+      <label for='text1' class='required'>Поле с ошибкой</label>
+      <input type='text' name='text' id='text1' placeholder='Placeholder'>
+    
+      <div class='alert input_error alert__input '>
+        <img class='alert__view' src='../assets/images/attention_alert.svg' alt='Error'>
+        <div class='alert__block'>
+          <div class='alert__info alert__info_error full-width'>
+            Error text
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class='alert input_block'>
+      <label for='text2' class='required'>Поле с подсказкой и наведением</label>
+      <input type='text' name='text' id='text2' placeholder='Placeholder'>
+    
+      <div class='alert__input alert__input_hint'>
+        <img class='alert__view' src='../assets/images/message__picket.svg' alt='Error'>
+        <div class='alert__block'>
+          <div class='alert__info full-width'>
+            Если работы планируются на выходной или праздничный день, обязательно приложите разрешение от руководства
+            АО "Москоллектор"
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- UI Input file -->
+    <div class='input_block'>
+      <input type='file' name='file' id='file' class='input_file'>
+      <label for='file' class='text_body'><span>Выберите файл…</span></label>
+    </div>
+    
+    
+    <div class='input_block'>
+      <input type='file' name='file' id='multi-file' class='input_file' data-multiple-caption='{count} выбрано' multiple=''>
+      <label for='multi-file' class='text_body'><span>Выберите несколько файлов…</span></label>
+    </div>
+    
+    
+    <!-- UI Buttons-->
+    <div class='button_block'>
+      <button class='button'>Button white</button>
+      <button class='button button_blue'>Button blue</button>
+      <button class='button button_svg'>
+        <img src='../assets/images/alert__info.svg' alt='svg'>
+        <span>Button svg</span>
+      </button>
+      <button class='button button_blue button_fullWidth'>Button fullwidth</button>
+    </div>
+    
+    
+    <!-- Typography -->
+    <div class='card__wrapper input_column'>
+      <h1>Типографика</h1>
+      <h1 class='mt_40'>заголовок H1</h1>
+      <h2>заголовок H2</h2>
+      <h3>заголовок H3</h3>
+      <h4>заголовок H4</h4>
+      <p class='text_body'>Обычный текст</p>
+      <p class='text_body2 mt_20'>Обычный текст по меньше</p>
+      <p class='text_body2 mt_20 text_blue_0'>Обычный текст по меньше</p>
+      <p class='text_note mt_20'>Сноски</p>
+      <p class='text_note mt_20 text_blue_0'>Сноски</p>
+    
+      <p class='mt_20'>
+        <span class='text_small text_gray_300'>Главная /</span>
+        <span class='text_small text_blue_200'>Личный кабинет потребителя</span>
+      </p>
+    </div>
+    <div class='card__wrapper'>
+      Адаптив на всю страницу | С 01.01.2023 АО «Москоллектор» вводит новый цифровой порядок допуска на объекты предприятия.
+      Подача заявок на допуск
+      производится в новом Личном Кабинете АО «Москоллектор» Для входа в Личный Кабинет используйте ваш e-mail адрес и
+      пароль, выданный вам при регистрации.
+    </div>
+    
+    <div class='card__wrapper image_align'>
+      <img src='../assets/images/alert__info.svg' alt='info'>
+      С картинкой | С 01.01.2023 АО «Москоллектор» вводит новый цифровой порядок допуска на объекты предприятия.
+      Подача заявок на допуск
+      производится в новом Личном Кабинете АО «Москоллектор» Для входа в Личный Кабинет используйте ваш e-mail адрес и
+      пароль, выданный вам при регистрации.
+    </div>
+    
+    <div class='card__wrapper card_500x300'>
+      Кастомные размеры... | С 01.01.2023 АО «Москоллектор» вводит новый цифровой порядок допуска на объекты предприятия.
+      Подача заявок на допуск
+      производится в новом Личном Кабинете АО «Москоллектор» Для входа в Личный Кабинет используйте ваш e-mail адрес и
+      пароль, выданный вам при регистрации.
+    </div>
+    
+    
+    
+    
+    <div class='input_block pretty p-default check_box fit-content'>
+      <input type='checkbox' />
+      <div class='state'>
+        <label>Нажми на коробку</label>
+      </div>
+    </div>
+    
+    <div class='input_block pretty p-default fit-content'>
+      <input type='checkbox' />
+      <div class='state'>
+        <label>Нажми на меня и коробку!</label>
+      </div>
+    </div>
+    
+    <div class='input_block pretty p-default check_label-only fit-content'>
+      <input type='checkbox' />
+      <div class='state'>
+        <label>Нажми только на меня!</label>
+      </div>
+    </div>
+    
+    <div class='input_block pretty p-default check_label-only check_box_big fit-content'>
+      <input type='checkbox' />
+      <div class='state'>
+        <label>Большой текст с переносом <br> строки лучше работает с label-only</label>
+      </div>
+    </div>  <div class='mt_40'>
+      <label>Custom Select</label>
+      <select
+        class='form-control'
+        name='custom-select'
+        id='custom-select'
+      >
+        <option value='Dropdown item 1'>Label One</option>
+        <option value='Dropdown item 2'>Label Two</option>
+        <option value='Dropdown item 3'>Label Three</option>
+        <option value='Dropdown item 4'>Label Four</option>
+      </select>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        new Choices('#custom-select1', {
+          allowHTML: true,
+          searchEnabled: false,
+        });
+      });
+    </script>  <div class='table__wrapper'>
+      <table>
+        <thead>
+        <tr>
+          <th class=''>
+            <div class='th_text th_text_2'>
+              <div class='pretty p-default check_box'>
+                <input type='checkbox' />
+                <div class='state'>
+                  <label class='text_gray_100'>Чекбокс и текст</label>
+                </div>
+              </div>
+              <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+            </div>
+          </th>
+    
+          <th class='th_150'>
+            <div class='th_text'>
+              <img src='../assets/images/lock.svg' alt='lock'>
+            </div>
+          </th>
+    
+          <th class='th_200'>
+            <div class='th_text th_text_center'>
+              <img src='../assets/images/lock.svg' alt='lock'>
+            </div>
+          </th>
+    
+          <th class='th_250'>
+            <div class='th_text th_text_2'>
+              <div class='image_align th_text_end'>
+                <img src='../assets/images/lock.svg' alt='arrow'>
+                <p>lorem</p>
+              </div>
+    
+              <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+            </div>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <p>
+              Если не задавать размер он будет на всю свободную ширину. Нельзя написать max-width..
+              Но если задать всем размер, появится полоса прокрутки.
+            </p>
+          </td>
+    
+          <td>
+            <p>Начало блока</p>
+          </td>
+    
+          <td>
+            <p>Центр блока</p>
+          </td>
+    
+          <td>
+            <p>Конец блока + img</p>
+          </td>
+        </tr>
+    
+        <tr class='tr_active'>
+          <td>
+            <p>
+              Если не задавать размер он будет на всю свободную ширину. Нельзя написать max-width..
+              Но если задать всем размер, появится полоса прокрутки.
+            </p>
+          </td>
+    
+          <td>
+            <p>Начало блока</p>
+          </td>
+    
+          <td>
+            <p>Центр блока</p>
+          </td>
+    
+          <td>
+            <p>Конец блока + img</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>  <div class='toggle_wrapper'>
+      <input class='toggle' type='checkbox' id='toggle' name='blocked'>
+      <label for='toggle'></label>
+    </div>  <div class='modal__wrapper' id='filter_modal'>
+      <div class='modal modal__wrapper card__wrapper card_500x300'>
+        <img class='modal__close' id='modal__close' src='../assets/images/close.svg' alt='close'>
+        <div class='modal__header'>Фильтры:</div>
+        <div class='modal__content'>
+          <div class='mt_40 input_block'>
+            <label>Пропуск заблокирован?</label>
+            <select
+              class='form-control'
+              name='custom-select'
+              id='custom-select1'
+            >
+              <option value='Dropdown item 1'>Не выбрано</option>
+              <option value='Dropdown item 2'>Нет</option>
+              <option value='Dropdown item 3'>Да</option>
+            </select>
+          </div>
+        </div>
+        <div class='modal__menu'>
+          <div class='button_block'>
+            <button class='button full-width'>Отменить</button>
+            <button class='button button_blue full-width'>Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        new Choices('#custom-select1', {
+          allowHTML: true,
+          searchEnabled: false,
+        });
+      });
+    </script>
+    
+    <script>
+      const modal = document.querySelector('#filter_modal');
+    
+      //open modal
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('#modal__open')) {
+          modal.classList.add('modal__active');
+        }
+      });
+    
+      // close modal
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('.modal__active') || e.target.matches('#modal__close')) {
+          modal.classList.remove('modal__active');
+        }
+      });
+    </script>  <div class='input_block'>
+    
+      <div class='input_block fit-content'>
+        <label>Pick a date:</label>
+        <input class='input_date' type='date' format='DD.MM.YYYY' />
+      </div>
+    
+      <div class='input_block time-picker fit-content'>
+        <label>Pick a date:</label>
+        <input class='input_date' type='time' />
+      </div>
+    
+      <p class='mt_20'>На всю ширину блока</p>
+    
+      <div class='input_block'>
+        <label>Pick a date:</label>
+        <input class='input_date' type='date' format='DD.MM.YYYY' />
+      </div>
+    
+      <div class='input_block time-picker full-width'>
+        <label>Pick a date:</label>
+        <input class='input_date' type='time' />
+      </div>
+    
+    </div>
+    
+    <script>
+    
+    
+      // [].slice.call(document.querySelectorAll('input[type="time"]')).forEach((e) => {
+      //   console.log(e.getAttribute(name));
+      //   let dp = new dpicker(e, {
+      //     'inputName': 'time',
+      //     'time': true,
+      //     'empty': true,
+      //     'valid': true,
+      //     'display': true,
+      //     'step': '30',
+      //     'disable': true,
+      //     'showCalendarButton': false,
+      //     'hideOnOutsideClick': false,
+      //     'concatHoursAndMinutes': true,
+      //   });
+      // });
+    
+    
+    </script>  <a href='auth-page.html' class='input_block'>Вернуться домой!!</a>
+  </div>
+  
+  
+
+  <footer>
+    <div class='footer__wrapper'>
+  
+      <div class='footer__info text_body'>
+        <div class='footer__logo__social'>
+          <div class='footer__logo'>
+            <img src='../assets/images/logo__footer.svg' alt='logoImg'>
+          </div>
+          <div class='footer__social image_align'>
+            <img src='../assets/images/vk.svg' alt='vkImg'>
+            <img src='../assets/images/telegram.svg' alt='telegram'>
+          </div>
+        </div>
+  
+        <div class='footer__contacts'>
+          <ul>
+            <li class='footer__contacts__location image_align'>
+              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
+            </li>
+            <li class='footer__contacts__phone image_align'>
+              <img src='../assets/images/phone.svg' alt='phoneImg'>
+              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+            </li>
+            <li class='footer__contacts__mail image_align'>
+              <img src='../assets/images/mail.svg' alt='mailImg'>
+              <span class='text_bold'>info@moscollector.ru</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class='footer__work-time image_justify'>
+          <div class='footer__work-time__img'>
+            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+          </div>
+          <ul>
+            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
+            <li>Пятница: <span>8:00 -15:45</span></li>
+            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class='footer__rights'>
+          <span class='text_body'>© 2022 АО «Москоллектор»</span>
+          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+      </div>
+  
+    </div>
+  </footer>
+</div>
+
+<script src='./../assets/js/app.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
+<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+
+</body>
+</html>

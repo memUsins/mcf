@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head><meta charset='UTF-8'>
+
+<!-- Choices-js -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css' />
+<!-- pretty-checkbox -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
+<link rel='stylesheet' href='./../assets/css/index.css'>
+<!-- Data Picker -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
+<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!-- Useful meta tags -->
+<meta http-equiv='x-ua-compatible' content='ie=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<meta name='robots' content='index, follow'>
+<meta name='google' content='notranslate'>
+<meta name='format-detection' content='telephone=no'>
+<meta name='description' content=''>
+
+<title>Moscollector | Главная</title>
+
+</head>
+<body>
+
+<div id='root'>
+
+  <header class='shadow_default'>
+    <div class='header__wrapper'>
+      <div class='header_logo'>
+        <a href='./'>
+          <img src='../assets/images/logo.svg' alt='Sup'>
+        </a>
+      </div>
+  
+  
+      <div class='header_support block_row max_968'>
+        <div class='image_align'>
+          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <a href='help.html'>Техническая поддержка</a>
+        </div>
+  
+  
+        <div class='header__accordion image_justify'>
+          <div class='accordion accordion_absolute' data-acc='header'>
+            <img src='../assets/images/notification.svg' alt='notification'>
+            <span class='text_body2 text_blue_0 text_med accordion__open' data-acc='header'>ООО "ВАРДИ"</span>
+          </div>
+  
+          <div class='panel panel_absolute p0'>
+            <div class='card__wrapper card_column'>
+              <p class='text_note'>Владелец: -- --</p>
+              <p class='text_note'>Действительна: -- --</p>
+              <a href='my-agent.html' class='text_note'>Мои представители</a>
+            </div>
+          </div>
+        </div>
+  
+        <a href='ui-kit.html'>UI KIT</a>
+  
+        <div class='image_justify'>
+          <a href='auth-page.html'><p class='text_body2'>Выйти</p></a>
+          <img src='../assets/images/logout.svg' alt='logout'>
+        </div>
+      </div>
+      <div class='header__menu min_968'>
+  <!--      <img src='' alt=''>      -->
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <div class=' container'>
+    <div class='section section__side'>
+      <div class='sidebar'>
+        <div class='sidebar__breadcrumbs max_968'>
+          <p>Главная</p>
+        </div>
+        <div class='sidebar__icons-menu min_968'>
+          <a><img src='../assets/images/headphones.svg' alt='headphones'></a>
+          <a href='profile.html'><img src='../assets/images/profile__popUp.svg' alt='profile'></a>
+        </div>
+        <div class='accordion p0 mt_20' data-acc='sidebar'>
+          <div data-acc='sidebar' class='sidebar__accordion accordion__open'>
+            <img class='image_svg_25' src='../assets/images/employees.svg' alt='employees'>
+            <a>Сотрудники</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+        <div class='panel ml_20 p0'>
+          <a class='mt_15' href='all-employees.html'>Все сотрудники</a>
+          <a class='mt_10' href='employees-requests.html'>Все заявки на сотрудников</a>
+        </div>
+        <div class='sidebar__link mt_20'>
+          <img class='image_svg_25' src='../assets/images/tolerance.svg' alt='tolerances'>
+          <a href='pass.html'>Допуски</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/requests.svg' alt='sub-request'>
+          <a href='sub-request.html'>Запросы от подрядчиков</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/documents.svg' alt='documents'>
+          <a href='documents.html'>Документы</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/appeals.svg' alt='appeals'>
+          <a href='tickets.html'>Обращения</a>
+        </div>
+        <div class='sidebar__link'>
+          <img class='image_svg_25' src='../assets/images/profile.svg' alt='profile'>
+          <a href='profile.html'>Учётные данные</a>
+        </div>
+        <div class='divider'></div>
+      
+        <div class='sidebar__buttons'>
+          <a href='add-pass-request.html'>
+            <button class='button button_blue text_body full-width text_note mt_20'>Новая заявка на ДОПУСК</button>
+          </a>
+          <a href='add-employees-requests.html'>
+            <button class='text_body2 button full-width p0 text_note mt_10'>Новая заявка на СОТРУДНИКОВ</button>
+          </a>
+        </div>
+      
+        <div class='sidebar__notification mt_40 max_968'>
+          <h2>Последние уведомления</h2>
+          <div class='image_align image_justify-end'>
+            <a href='notification.html'>Все сообщения</a>
+            <img src='../assets/images/array__right.svg' alt='arrow'>
+          </div>
+        </div>
+      </div>      
+      <div class='section__body section__body_overflow-none full-width'>
+        <h1>Заявка №ДИ-00000206 от 13 декабря 2022</h1>
+      
+        <h3 class='text_body text_bold text_blue_0'>Иные работы</h3>
+      
+        <div class='block_row justify-space max_320_column'>
+          <p class='text_note'>Статус заявки:
+            <span class='status status_consideration'>Зарегистрирована</span>
+          </p>
+          <div class='block_row gap-10 max_380_column'>
+            <p class='text_note'>Дата последнего изменения:</p>
+            <p class='text_note text_med'>13.12.2022</p>
+          </div>
+        </div>
+      
+        <!-- Заявка отклонена -->
+      
+        <div class='block_row card__wrapper'>
+          <div class='image_align'>
+            <img src='../assets/images/attention_alert.png' alt=''>
+            <p class='text_note'>В соответствии с протоколом рассмотрения заявок, принято решение отказать в допуске по
+              следующей причине:
+              В указанные вами даты в указанном вами коллекторе будут проводится работы.</p>
+          </div>
+        </div>
+      
+        <!-- Заявка принята -->
+      
+        <div class='block_row card__wrapper max_480_column'>
+          <div class='image_align'>
+            <img src='../assets/images/message__accept.svg' alt=''>
+            <p class='text_note'>Текст согласования</p>
+          </div>
+      
+          <div class='block_column'>
+            <p class='text_note'>Вам произведена корректировка дат производства работ, их можно проводить:</p>
+            <div class='block_row full-width justify-start max_380_column'>
+              <div class='text_block gap-10 max-text_block'>
+                <p class='text_note'>Дата начала работ:</p>
+                <span class='text_note text_med'>14.12.2022</span>
+              </div>
+      
+              <div class='text_block gap-10 max-text_block'>
+                <p class='text_note'>Время проведения работ:</p>
+                <span class='text_note text_med'>с 08:00 до 12:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Инофрмация -->
+      
+        <div class='card__wrapper full-width mt_40'>
+          <div class='block_column image_justify full-width'>
+            <div class='accordion ' data-acc='test'>
+              <div class='accordion__open image_align' data-acc='test'>
+                <h3 class='text_body text_bold text_blue_0 m0'>Информация о составе работ</h3>
+                <img src='../assets/images/arrow__up.svg' alt='notification'>
+              </div>
+            </div>
+      
+            <div class='panel active full-width'>
+              <p class='divider mt_10'></p>
+      
+              <div class='text_block'>
+                <span>Вид работ:</span>
+                <p>Иные работы</p>
+              </div>
+      
+              <div class='text_block'>
+                <span>Описание:</span>
+                <p>Нет</p>
+              </div>
+      
+              <div class='text_block'>
+                <span>С проведением газосварочных или огневых работ:</span>
+                <p>Нет</p>
+              </div>
+      
+              <div class='text_block'>
+                <span>Документ основание для проведения работ:</span>
+                <p>Ордер №1 от 06 декабря 2022</p>
+              </div>
+      
+              <div class='text_block'>
+                <span>Предполагаемое количество людей в бригаде:</span>
+                <p>123123 работника</p>
+              </div>
+      
+              <!-- Место проведения работ -->
+      
+              <h3 class='text_body text_bold text_blue_0 mt_40'>Место проведения работ и вид коммуникаций</h3>
+      
+              <div class='collector full-width'>
+                <div class='block_column justify-start fit-content '>
+              
+                  <div class='block_row justify-start mt_10 max_640_column'>
+                    <div class='text_block text_block-column m0 full-width'>
+                      <span class='word-break'>Вид коммуникации</span>
+                      <p>Тепловые сети</p>
+                    </div>
+              
+                    <div class='text_block text_block-column m0 full-width'>
+                      <span class='word-break'>№ коммуникации</span>
+                      <p>1</p>
+                    </div>
+              
+                    <div class='text_block text_block-column m0 full-width'>
+                      <span class='word-break'>Адресная привязка</span>
+                      <p>---</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class='text_block'>
+                  <span>Коллектор:</span>
+                  <p>Тверской Ямской 4-й, С. Кудринский, РЭК-1</p>
+                </div>
+              
+                <div class='text_block'>
+                  <span>Пикеты:</span>
+                  <p>0-100,</p>
+                  <p>0-100</p>
+                </div>
+              
+                <div class='block_row mt_20 justify-start align-center gap-10'>
+                  <p class='text_note text_med'>C выдачей ключей от аварийных выходов: <span class='ml_10 text_green'>ДА</span>,
+                    <span class='text_note text_gray_200 ml_5'>на пикетах:</span>
+                    <span class='text_body2 text_bold ml_5'>1</span>
+                  </p>
+                </div>
+              
+                <div class='block_row mt_20 justify-start align-center gap-10'>
+                  <p class='text_note text_med'>Со вскрытием люков: <span class='ml_10 text_green'>ДА</span>,
+                    <span class='text_note text_gray_200 ml_5'>на пикетах:</span>
+                    <span class='text_body2 text_bold ml_5'>1</span>
+                  </p>
+                </div>
+              
+              </div>
+      
+              <div class='block_row full-width justify-start max_480_column'>
+                <div class='text_block'>
+                  <span class='text_note'>Дата начала работ:</span>
+                  <p class='text_note text_med'>14.12.2022</p>
+                </div>
+      
+                <div class='text_block'>
+                  <span class='text_note'>Время проведения работ:</span>
+                  <p class='text_note text_med'>с 08:00 до 12:00</p>
+                </div>
+              </div>
+      
+              <!-- Документ, подтверждающий -->
+      
+              <h3 class='text_body text_bold text_blue_0 mt_40'>Документ, подтверждающий полномочия подписанта</h3>
+      
+      
+              <div class='block_row justify-start max_480_column max_480_gap20'>
+                <div class='text_block m0'>
+                  <span>Вид документа:</span>
+                  <p>Доверенность</p>
+                </div>
+      
+                <div class='text_block m0'>
+                  <span>Номер документа:</span>
+                  <p>1</p>
+                </div>
+      
+                <div class='text_block m0'>
+                  <span>Дата документа:</span>
+                  <p>0</p>
+                </div>
+              </div>
+      
+              <div class='block_row justify-start max_480_column'>
+                <div class='text_block'>
+                  <span>Исполнитель:</span>
+                  <p>Сергей</p>
+                </div>
+      
+                <div class='text_block'>
+                  <span>Контактый номер:</span>
+                  <p>+7(777)777-77-77</p>
+                </div>
+              </div>
+      
+              <div class='image_align mt_20'>
+                <img src='../assets/images/scan.svg' alt='scan'>
+                <a class='text_note'>Скачать Screenshot5.png</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class='button_block mt_20'>
+          <a href='pass-check-view.html'>Подтверждение допуска</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class='footer__wrapper'>
+  
+      <div class='footer__info text_body'>
+        <div class='footer__logo__social'>
+          <div class='footer__logo'>
+            <img src='../assets/images/logo__footer.svg' alt='logoImg'>
+          </div>
+          <div class='footer__social image_align'>
+            <img src='../assets/images/vk.svg' alt='vkImg'>
+            <img src='../assets/images/telegram.svg' alt='telegram'>
+          </div>
+        </div>
+  
+        <div class='footer__contacts'>
+          <ul>
+            <li class='footer__contacts__location image_align'>
+              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
+            </li>
+            <li class='footer__contacts__phone image_align'>
+              <img src='../assets/images/phone.svg' alt='phoneImg'>
+              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+            </li>
+            <li class='footer__contacts__mail image_align'>
+              <img src='../assets/images/mail.svg' alt='mailImg'>
+              <span class='text_bold'>info@moscollector.ru</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class='footer__work-time image_justify'>
+          <div class='footer__work-time__img'>
+            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+          </div>
+          <ul>
+            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
+            <li>Пятница: <span>8:00 -15:45</span></li>
+            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class='footer__rights'>
+          <span class='text_body'>© 2022 АО «Москоллектор»</span>
+          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+      </div>
+  
+    </div>
+  </footer>
+</div>
+
+<script src='./../assets/js/app.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
+<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+
+</body>
+</html>
