@@ -8,8 +8,12 @@
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
 <link rel='stylesheet' href='./../assets/css/index.css'>
 <!-- Data Picker -->
+<script src='https://code.jquery.com/jquery-3.6.3.min.js'
+        integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=' crossorigin='anonymous'></script>
+
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
-<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!--<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 <!-- Useful meta tags -->
 <meta http-equiv='x-ua-compatible' content='ie=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -17,6 +21,9 @@
 <meta name='google' content='notranslate'>
 <meta name='format-detection' content='telephone=no'>
 <meta name='description' content=''>
+
+<link rel='stylesheet' href='./../assets/lib/nice-select2.css'>
+<script src='./../assets/lib/nice-select2.js'></script>
 
 <title>Moscollector | Главная</title>
 
@@ -36,42 +43,81 @@
   
       <div class='header_support block_row max_968'>
         <div class='image_align'>
-          <img src='../assets/images/headphones.svg' alt='Sup'>
-          <a href='help.html'>Техническая поддержка</a>
+          <span class='icon icon-headphones'></span>
+          <a id='modal__open'>Техническая поддержка</a>
         </div>
   
   
-        <div class='header__accordion image_justify'>
-          <div class='accordion accordion_absolute' data-acc='header'>
-            <img src='../assets/images/notification.svg' alt='notification'>
-            <span class='text_body2 text_blue_0 text_med accordion__open' data-acc='header'>ООО "ВАРДИ"</span>
+        <div class='header__accordion image_align '>
+          <div class='accordion accordion_absolute image_align' data-acc='header'>
+            <span class='icon icon-notification'></span>
+  
+            <div class='image_align relative'>
+              <span class='icon icon-notification'></span>
+              <span class='notification__number'>1</span>
+            </div>
+  
+            <div class='image_align relative'>
+              <span class='icon icon-notification'></span>
+              <span class='notification__number'>99</span>
+            </div>
+            <div class='image_align accordion__open' data-acc='header'>
+              <span class='text_body2 text_blue_0 text_med'>ООО "ВАРДИ"</span>
+              <span class='icon icon-arrow__down'></span>
+            </div>
           </div>
   
           <div class='panel panel_absolute p0'>
             <div class='card__wrapper card_column'>
-              <p class='text_note'>Владелец: -- --</p>
-              <p class='text_note'>Действительна: -- --</p>
+              <p class='text_note'>Владелец: <br> Иванов Иван Иванович</p>
+              <p class='text_note'>Действительна: <br> с 07.09.2022 по 07.12.2023</p>
               <a href='my-agent.html' class='text_note'>Мои представители</a>
             </div>
           </div>
         </div>
   
-        <a href='ui-kit.html'>UI KIT</a>
-  
-        <div class='image_justify'>
+        <div class='image_align'>
           <a href='auth-page.html'><p class='text_body2'>Выйти</p></a>
-          <img src='../assets/images/logout.svg' alt='logout'>
+          <span class='icon icon-logout'></span>
         </div>
       </div>
       <div class='header__menu min_968'>
-  <!--      <img src='' alt=''>      -->
-        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
-          <span class="burger__line"></span>
+        <button class='burger' aria-label='Открыть меню' aria-expanded='false' data-burger=''>
+          <span class='burger__line'></span>
         </button>
       </div>
     </div>
-  </header>
   
+    <div class='modal__wrapper modal-body' data-moda='error-hint_modal'>
+      <div class='modal card__wrapper maxw_500 gap-20 p20-25'>
+        <span class='icon icon-close modal__close close'></span>
+        <div class='modal__header m0'>
+          <h3 class='text_bold text_body text_blue_0 m0'>Техническая поддержка</h3>
+        </div>
+    
+        <div class='modal__content block_column align-start'>
+          <p class='text_note'>По вопросам оформления заявок по новому цифровому порядку допуска в коллектора через
+            сервис «Личный Кабинет» АО «Москоллектор» Вы можете обратиться в Центр обслуживания потребителей
+          </p>
+          <div class='mt_20 justify-space full-width text_block'>
+            <span>Телефон:</span>
+            <p>+7 (499) 222-22-01, доб. 5555</p>
+          </div>
+    
+          <div class='mt_10 justify-space full-width text_block'>
+            <span>Электронная почта:</span>
+            <a href='<email>'>itinfo@moscollector.ru</a>
+          </div>
+    
+          <a href='help.html' class='link_underline mt_20'>Ответы на частые вопросы</a>
+        </div>
+    
+        <div class='modal__menu block_column align-center'>
+          <p class='divider'></p>
+          <a class='mt_20 text_blue_0 text_bold close'>Я всё понял</a>
+        </div>
+      </div>
+    </div></header>
 
   <div class=' container'>
     <div class='section section__side'>
@@ -79,15 +125,15 @@
         <div class='sidebar__breadcrumbs max_968'>
           <p>Главная</p>
         </div>
-        <div class='sidebar__icons-menu min_968'>
-          <a><img src='../assets/images/headphones.svg' alt='headphones'></a>
-          <a href='profile.html'><img src='../assets/images/profile__popUp.svg' alt='profile'></a>
+        <div class='sidebar__icons-menu min_968 gap-40'>
+          <a><span class='icon icon-headphones'></span></a>
+          <a href='profile.html'><span class='icon icon-profile__popUp'></span></a>
         </div>
         <div class='accordion p0 mt_20' data-acc='sidebar'>
           <div data-acc='sidebar' class='sidebar__accordion accordion__open'>
-            <img class='image_svg_25' src='../assets/images/employees.svg' alt='employees'>
+            <span class='icon icon-employees'></span>
             <a>Сотрудники</a>
-            <img src='../assets/images/array__right.svg' alt='arrow'>
+            <span class='icon icon-arrow__down'></span>
           </div>
         </div>
         <div class='panel ml_20 p0'>
@@ -95,23 +141,23 @@
           <a class='mt_10' href='employees-requests.html'>Все заявки на сотрудников</a>
         </div>
         <div class='sidebar__link mt_20'>
-          <img class='image_svg_25' src='../assets/images/tolerance.svg' alt='tolerances'>
+          <span class='icon icon-tolerance'></span>
           <a href='pass.html'>Допуски</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/requests.svg' alt='sub-request'>
+          <span class='icon icon-requests'></span>
           <a href='sub-request.html'>Запросы от подрядчиков</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/documents.svg' alt='documents'>
+          <span class='icon icon-documents'></span>
           <a href='documents.html'>Документы</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/appeals.svg' alt='appeals'>
+          <span class='icon icon-appeals'></span>
           <a href='tickets.html'>Обращения</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/profile.svg' alt='profile'>
+          <span class='icon icon-profile'></span>
           <a href='profile.html'>Учётные данные</a>
         </div>
         <div class='divider'></div>
@@ -125,11 +171,80 @@
           </a>
         </div>
       
-        <div class='sidebar__notification mt_40 max_968'>
+        <div class='sidebar__notification mt_40 max_968 '>
           <h2>Последние уведомления</h2>
-          <div class='image_align image_justify-end'>
-            <a href='notification.html'>Все сообщения</a>
-            <img src='../assets/images/array__right.svg' alt='arrow'>
+      
+          <div class='card__wrapper block_column relative'>
+      
+            <span class='icon icon-close modal__close'></span>
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Дата:</span>
+              <p class='text_small'>«30» января 2023 в 14:53</p>
+            </div>
+      
+            <div class='text_block'>
+              <p class='text_small'>АО «Москоллектор» принял вашу заявку № СИ-00000179</p>
+            </div>
+      
+            <p class='divider'></p>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Тип сообщения:</span>
+              <p class='text_small'>По заявке</p>
+            </div>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Номер заявки:</span>
+              <p class='text_small'>СИ-00000179</p>
+            </div>
+      
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Владелец коммуникаций:</span>
+              <p class='text_small'>ООО "ВАРДИ"</p>
+            </div>
+      
+            <a class='link_underline' href='notification-view.html'>Перейти в уведомление</a>
+          </div>
+      
+          <div class='card__wrapper block_column relative'>
+      
+            <span class='icon icon-close modal__close'></span>
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Дата:</span>
+              <p class='text_small'>«30» января 2023 в 14:53</p>
+            </div>
+      
+            <div class='text_block'>
+              <p class='text_small'>АО «Москоллектор» принял вашу заявку № СИ-00000179</p>
+            </div>
+      
+            <p class='divider'></p>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Тип сообщения:</span>
+              <p class='text_small'>По заявке</p>
+            </div>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Номер заявки:</span>
+              <p class='text_small'>СИ-00000179</p>
+            </div>
+      
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Владелец коммуникаций:</span>
+              <p class='text_small'>ООО "ВАРДИ"</p>
+            </div>
+      
+            <a class='link_underline' href='notification-view.html'>Перейти в уведомление</a>
+          </div>
+      
+          <div class='image_align image_justify-end mt_20'>
+            <a href='notification.html' class='image_align'>
+              Все сообщения
+              <span class='icon icon-arrow__right'></span>
+            </a>
           </div>
         </div>
       </div>      
@@ -137,12 +252,14 @@
         <h1>Учетные данные</h1>
       
         <div class='tab__list'>
-          <div class='tab__title tab_active' data-tab-title='organisation'>Профиль организации</div>
-          <div class='tab__title' data-tab-title='profile'>Личный профиль</div>
+          <div class='tab__title tab_active' data-tab-title='organisation' data-with-url='true'>Профиль организации</div>
+          <div class='tab__title' data-tab-title='profile' data-with-url='true'>Личный профиль</div>
         </div>
       
         <div class='tab tab_active' data-tab-title='organisation'>
-          <div class='card__wrapper card_column'>
+          <div class='card__wrapper card_column gap-0'>
+            <h2 class='text_body text_blue_0 text_bold m0'>Редактирование профиля организации</h2>
+        
             <div class='block_row full-width max_480_column'>
               <div class='full-width'>
                 <div class='input_block full-width'>
@@ -203,9 +320,24 @@
         
         
           <div class='block_row full-width justify-end'>
-            <button class='button button_blue word-break-wrap'>Подписать и отправить запрос на изменение данных</button>
+            <button class='button button_blue word-break-wrap modal-trigger' data-modal-trigger='edit_organisation'>Подписать и отправить запрос на изменение данных</button>
           </div>
-        </div>
+        
+          <div class='modal__wrapper modal-body' data-modal='edit_organisation'>
+            <div class='modal card__wrapper maxw_600'>
+              <span class='icon icon-close modal__close close'></span>
+          
+              <div class='modal__content'>
+                <h2 class='text_bold m0'>Чтобы изменить данные о компании, Вам необходимо: </h2>
+                <p class='text_body text_med mt_20'>1. Собрать документы</p>
+                <p class='text_body text_med mt_5'>2. Приехать по адресу: Г.Москва, ул. Ленина, 17 корп 1, д. 2, оф. 31</p>
+              </div>
+          
+              <div class='modal__menu block_column align-center'>
+                <button class='button button_blue fit-content close'>Понятно</button>
+              </div>
+            </div>
+          </div></div>
         <div class='tab' data-tab-title='profile'>
           <div class='card__wrapper card_column'>
             <div>
@@ -216,24 +348,24 @@
             <div class='block_row full-width max_480_column'>
               <div class='full-width'>
                 <div class='input_block full-width'>
-                  <label for='email'>Email</label>
+                  <label class='required' for='email'>Email</label>
                   <input type='text' name='email' id='email'>
                 </div>
         
                 <div class='input_block full-width'>
-                  <label for='fullname'>Полное имя</label>
+                  <label class='required' for='fullname'>Полное имя</label>
                   <input type='text' name='fullname' id='fullname'>
                 </div>
               </div>
         
               <div class='full-width'>
                 <div class='input_block full-width'>
-                  <label for='specifiedpassword'>Пароль</label>
+                  <label class='required' for='specifiedpassword'>Пароль</label>
                   <input type='password' name='specifiedpassword' id='specifiedpassword'>
                 </div>
         
                 <div class='input_block full-width'>
-                  <label for='confirmpassword'>Еще раз пароль</label>
+                  <label class='required' for='confirmpassword'>Еще раз пароль</label>
                   <input type='password' name='confirmpassword' id='confirmpassword'>
                 </div>
               </div>
@@ -256,52 +388,54 @@
             <img src='../assets/images/logo__footer.svg' alt='logoImg'>
           </div>
           <div class='footer__social image_align'>
-            <img src='../assets/images/vk.svg' alt='vkImg'>
-            <img src='../assets/images/telegram.svg' alt='telegram'>
+            <span class='icon icon-vk'></span>
+            <span class='icon icon-telegram'></span>
           </div>
         </div>
   
         <div class='footer__contacts'>
           <ul>
             <li class='footer__contacts__location image_align'>
-              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='icon icon-location'></span>
+  
+  
               <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
             </li>
             <li class='footer__contacts__phone image_align'>
-              <img src='../assets/images/phone.svg' alt='phoneImg'>
-              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+              <span class='icon icon-phone'></span>
+              <span class='text_bold'><a href='tel:74992222201'>+7 499 222-22-01</a></span>
             </li>
             <li class='footer__contacts__mail image_align'>
-              <img src='../assets/images/mail.svg' alt='mailImg'>
-              <span class='text_bold'>info@moscollector.ru</span>
+              <span class='icon icon-mail'></span>
+              <span class='text_bold'><a href='mail:info@moscollector.ru'>info@moscollector.ru</a></span>
             </li>
           </ul>
         </div>
   
         <div class='footer__work-time image_justify'>
           <div class='footer__work-time__img'>
-            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+            <span class='icon icon-worktime'></span>
           </div>
           <ul>
-            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
-            <li>Пятница: <span>8:00 -15:45</span></li>
-            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+            <li>Понедельник - четверг: <span>8:00 - 17:00</span></li>
+            <li>Пятница: <span>8:00 - 15:45</span></li>
+            <li>Обед: <span>с 12:00 до 12:45</span></li>
           </ul>
         </div>
       </div>
   
       <div class='footer__rights'>
-          <span class='text_body'>© 2022 АО «Москоллектор»</span>
-          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+        <span class='text_body'>© 2022 АО «Москоллектор»</span>
+        <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО
+          «Москоллектор»</a>
       </div>
   
     </div>
   </footer>
 </div>
-
 <script src='./../assets/js/app.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
-<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 
 </body>
 </html>

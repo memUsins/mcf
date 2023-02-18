@@ -8,8 +8,12 @@
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
 <link rel='stylesheet' href='./../assets/css/index.css'>
 <!-- Data Picker -->
+<script src='https://code.jquery.com/jquery-3.6.3.min.js'
+        integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=' crossorigin='anonymous'></script>
+
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
-<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!--<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 <!-- Useful meta tags -->
 <meta http-equiv='x-ua-compatible' content='ie=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -17,6 +21,9 @@
 <meta name='google' content='notranslate'>
 <meta name='format-detection' content='telephone=no'>
 <meta name='description' content=''>
+
+<link rel='stylesheet' href='./../assets/lib/nice-select2.css'>
+<script src='./../assets/lib/nice-select2.js'></script>
 
 <title>Moscollector | Главная</title>
 
@@ -36,42 +43,81 @@
   
       <div class='header_support block_row max_968'>
         <div class='image_align'>
-          <img src='../assets/images/headphones.svg' alt='Sup'>
-          <a href='help.html'>Техническая поддержка</a>
+          <span class='icon icon-headphones'></span>
+          <a id='modal__open'>Техническая поддержка</a>
         </div>
   
   
-        <div class='header__accordion image_justify'>
-          <div class='accordion accordion_absolute' data-acc='header'>
-            <img src='../assets/images/notification.svg' alt='notification'>
-            <span class='text_body2 text_blue_0 text_med accordion__open' data-acc='header'>ООО "ВАРДИ"</span>
+        <div class='header__accordion image_align '>
+          <div class='accordion accordion_absolute image_align' data-acc='header'>
+            <span class='icon icon-notification'></span>
+  
+            <div class='image_align relative'>
+              <span class='icon icon-notification'></span>
+              <span class='notification__number'>1</span>
+            </div>
+  
+            <div class='image_align relative'>
+              <span class='icon icon-notification'></span>
+              <span class='notification__number'>99</span>
+            </div>
+            <div class='image_align accordion__open' data-acc='header'>
+              <span class='text_body2 text_blue_0 text_med'>ООО "ВАРДИ"</span>
+              <span class='icon icon-arrow__down'></span>
+            </div>
           </div>
   
           <div class='panel panel_absolute p0'>
             <div class='card__wrapper card_column'>
-              <p class='text_note'>Владелец: -- --</p>
-              <p class='text_note'>Действительна: -- --</p>
+              <p class='text_note'>Владелец: <br> Иванов Иван Иванович</p>
+              <p class='text_note'>Действительна: <br> с 07.09.2022 по 07.12.2023</p>
               <a href='my-agent.html' class='text_note'>Мои представители</a>
             </div>
           </div>
         </div>
   
-        <a href='ui-kit.html'>UI KIT</a>
-  
-        <div class='image_justify'>
+        <div class='image_align'>
           <a href='auth-page.html'><p class='text_body2'>Выйти</p></a>
-          <img src='../assets/images/logout.svg' alt='logout'>
+          <span class='icon icon-logout'></span>
         </div>
       </div>
       <div class='header__menu min_968'>
-  <!--      <img src='' alt=''>      -->
-        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
-          <span class="burger__line"></span>
+        <button class='burger' aria-label='Открыть меню' aria-expanded='false' data-burger=''>
+          <span class='burger__line'></span>
         </button>
       </div>
     </div>
-  </header>
   
+    <div class='modal__wrapper modal-body' data-moda='error-hint_modal'>
+      <div class='modal card__wrapper maxw_500 gap-20 p20-25'>
+        <span class='icon icon-close modal__close close'></span>
+        <div class='modal__header m0'>
+          <h3 class='text_bold text_body text_blue_0 m0'>Техническая поддержка</h3>
+        </div>
+    
+        <div class='modal__content block_column align-start'>
+          <p class='text_note'>По вопросам оформления заявок по новому цифровому порядку допуска в коллектора через
+            сервис «Личный Кабинет» АО «Москоллектор» Вы можете обратиться в Центр обслуживания потребителей
+          </p>
+          <div class='mt_20 justify-space full-width text_block'>
+            <span>Телефон:</span>
+            <p>+7 (499) 222-22-01, доб. 5555</p>
+          </div>
+    
+          <div class='mt_10 justify-space full-width text_block'>
+            <span>Электронная почта:</span>
+            <a href='<email>'>itinfo@moscollector.ru</a>
+          </div>
+    
+          <a href='help.html' class='link_underline mt_20'>Ответы на частые вопросы</a>
+        </div>
+    
+        <div class='modal__menu block_column align-center'>
+          <p class='divider'></p>
+          <a class='mt_20 text_blue_0 text_bold close'>Я всё понял</a>
+        </div>
+      </div>
+    </div></header>
 
   <div class=' container'>
     <div class='section section__side'>
@@ -79,15 +125,15 @@
         <div class='sidebar__breadcrumbs max_968'>
           <p>Главная</p>
         </div>
-        <div class='sidebar__icons-menu min_968'>
-          <a><img src='../assets/images/headphones.svg' alt='headphones'></a>
-          <a href='profile.html'><img src='../assets/images/profile__popUp.svg' alt='profile'></a>
+        <div class='sidebar__icons-menu min_968 gap-40'>
+          <a><span class='icon icon-headphones'></span></a>
+          <a href='profile.html'><span class='icon icon-profile__popUp'></span></a>
         </div>
         <div class='accordion p0 mt_20' data-acc='sidebar'>
           <div data-acc='sidebar' class='sidebar__accordion accordion__open'>
-            <img class='image_svg_25' src='../assets/images/employees.svg' alt='employees'>
+            <span class='icon icon-employees'></span>
             <a>Сотрудники</a>
-            <img src='../assets/images/array__right.svg' alt='arrow'>
+            <span class='icon icon-arrow__down'></span>
           </div>
         </div>
         <div class='panel ml_20 p0'>
@@ -95,23 +141,23 @@
           <a class='mt_10' href='employees-requests.html'>Все заявки на сотрудников</a>
         </div>
         <div class='sidebar__link mt_20'>
-          <img class='image_svg_25' src='../assets/images/tolerance.svg' alt='tolerances'>
+          <span class='icon icon-tolerance'></span>
           <a href='pass.html'>Допуски</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/requests.svg' alt='sub-request'>
+          <span class='icon icon-requests'></span>
           <a href='sub-request.html'>Запросы от подрядчиков</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/documents.svg' alt='documents'>
+          <span class='icon icon-documents'></span>
           <a href='documents.html'>Документы</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/appeals.svg' alt='appeals'>
+          <span class='icon icon-appeals'></span>
           <a href='tickets.html'>Обращения</a>
         </div>
         <div class='sidebar__link'>
-          <img class='image_svg_25' src='../assets/images/profile.svg' alt='profile'>
+          <span class='icon icon-profile'></span>
           <a href='profile.html'>Учётные данные</a>
         </div>
         <div class='divider'></div>
@@ -125,11 +171,80 @@
           </a>
         </div>
       
-        <div class='sidebar__notification mt_40 max_968'>
+        <div class='sidebar__notification mt_40 max_968 '>
           <h2>Последние уведомления</h2>
-          <div class='image_align image_justify-end'>
-            <a href='notification.html'>Все сообщения</a>
-            <img src='../assets/images/array__right.svg' alt='arrow'>
+      
+          <div class='card__wrapper block_column relative'>
+      
+            <span class='icon icon-close modal__close'></span>
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Дата:</span>
+              <p class='text_small'>«30» января 2023 в 14:53</p>
+            </div>
+      
+            <div class='text_block'>
+              <p class='text_small'>АО «Москоллектор» принял вашу заявку № СИ-00000179</p>
+            </div>
+      
+            <p class='divider'></p>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Тип сообщения:</span>
+              <p class='text_small'>По заявке</p>
+            </div>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Номер заявки:</span>
+              <p class='text_small'>СИ-00000179</p>
+            </div>
+      
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Владелец коммуникаций:</span>
+              <p class='text_small'>ООО "ВАРДИ"</p>
+            </div>
+      
+            <a class='link_underline' href='notification-view.html'>Перейти в уведомление</a>
+          </div>
+      
+          <div class='card__wrapper block_column relative'>
+      
+            <span class='icon icon-close modal__close'></span>
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Дата:</span>
+              <p class='text_small'>«30» января 2023 в 14:53</p>
+            </div>
+      
+            <div class='text_block'>
+              <p class='text_small'>АО «Москоллектор» принял вашу заявку № СИ-00000179</p>
+            </div>
+      
+            <p class='divider'></p>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Тип сообщения:</span>
+              <p class='text_small'>По заявке</p>
+            </div>
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Номер заявки:</span>
+              <p class='text_small'>СИ-00000179</p>
+            </div>
+      
+      
+            <div class='text_block block_column align-start'>
+              <span class='text_small'>Владелец коммуникаций:</span>
+              <p class='text_small'>ООО "ВАРДИ"</p>
+            </div>
+      
+            <a class='link_underline' href='notification-view.html'>Перейти в уведомление</a>
+          </div>
+      
+          <div class='image_align image_justify-end mt_20'>
+            <a href='notification.html' class='image_align'>
+              Все сообщения
+              <span class='icon icon-arrow__right'></span>
+            </a>
           </div>
         </div>
       </div>      
@@ -137,389 +252,824 @@
         <h1>Новая заявка на список сотрудников</h1>
       
         <div class='card__wrapper input_block gap-0'>
-          <h3 class='text_body text_bold text_blue_0 m0'>Общая информация по заявке</h3>
       
-          <div class='alert block_row full-width align-end'>
-            <div class='input_block full-width'>
-              <label for='main'>Организация заказчик работ (владелец коммуникаций):</label>
-              <input type='text' name='main' id='main' placeholder='Введите название, ИНН или ОГРН организации'>
+          <div class='accordion' data-acc='info'>
+            <div class='accordion__open active image_align' data-acc='info'>
+              <h3 class='text_body text_bold text_blue_0 m0'>Общая информация по заявке</h3>
+              <span class='icon icon-arrow__up'></span>
             </div>
+          </div>
       
-            <p class='mb_5 text_note text_med max_1024'>Если вы являетесь подрядчиком какой-либо организации, укажите эту организацию в
-              поле слева</p>
       
-            <div class="alert__input alert__input_hint min_1024">
-              <img class="alert__view" src="../assets/images/message__picket.svg" alt="Error">
-              <div class="alert__block">
-                <div class="alert__info full-width">
-                  Если вы являетесь подрядчиком какой-либо организации, укажите эту организацию в поле слева
+          <div class='panel active full-width'>
+      
+            <div class='block_column is-contractor'>
+              <p class='text_body text_gray_0 mt_10 required'>Вы являетесь подрядчиком?</p>
+      
+              <div class='input_block pretty p-default fit-content radio'>
+                <input type='radio' name='is-contractor' value='true' checked />
+                <div class='state'>
+                  <label>Да</label>
+                </div>
+              </div>
+      
+              <div class='input_block pretty p-default fit-content radio'>
+                <input type='radio' name='is-contractor' value='false' />
+                <div class='state'>
+                  <label>Нет</label>
                 </div>
               </div>
             </div>
-          </div>
       
-          <div class='block_column full-width align-end'>
-            <div class='block_row full-width mt_20'>
-              <label class='full-width'>Документ основание для <br> проведения работ:</label>
-      
-              <label class='full-width'>Номер <br> документа</label>
-      
-              <label class='full-width'>Дата <br> документа</label>
-            </div>
-      
-            <div class='block_row full-width max_640_column'>
-              <div class='input_block full-width m0'>
-                <select
-                  class='form-control'
-                  name='type_doc'
-                  id='custom-select1'
-                >
-                  <option value='Dropdown item 1'>Label One</option>
-                  <option value='Dropdown item 2'>Label Two</option>
-                  <option value='Dropdown item 3'>Label Three</option>
-                </select>
-              </div>
-      
-              <div class='input_block full-width m0'>
-                <input type='text' name='number_doc' id='number_doc'>
-              </div>
-      
-              <div class='input_block full-width m0'>
-                <input type='date' name='date_doc' id='date_doc'>
+            <div class='alert block_row full-width align-end organisation'>
+              <div class='input_block full-width'>
+                <label class='required'>Организация заказчик работ (владелец коммуникаций)</label>
+                <input type='text' name='main' id='main' placeholder='Введите название, ИНН или ОГРН организации'>
               </div>
             </div>
-          </div>
       
-          <p class='mt_15 text_note text_gray_100'>+Добавить документ</p>
       
-          <div class='input_block full-width'>
-            <label>Вид работ</label>
-            <select
-              class='form-control'
-              name='custom-select'
-              id='custom-select'
-            >
-              <option value='Dropdown item 1'>Label One</option>
-              <option value='Dropdown item 2'>Label Two</option>
-              <option value='Dropdown item 3'>Label Three</option>
-            </select>
+            <div class='document__wrapper'>
+              <div class='block_column full-width align-end document__list'>
+                <div class='block_row full-width mt_20'>
+                  <label class='full-width required'>Документ основание для <br> проведения работ</label>
+      
+                  <label class='full-width required'>Номер <br> документа</label>
+      
+                  <label class='full-width required'>Дата <br> документа</label>
+                </div>
+                <div class='document__item block_row full-width max_640_column align-center' data-id='1'>
+                  <div class='input_block full-width m0'>
+                    <select
+                      class='form-control'
+                      name='type_doc'
+                      id='custom-select1'
+                    >
+                      <option value=''>Выберите..</option>
+                      <option value='7B52FAAC-C5CE-4272-84ED-349655FFD47E'>Договор</option>
+                      <option value='103E95FE-6E80-40F0-8CB0-084587E8209D'>Ордер</option>
+                      <option value='54DE6C9C-EB9B-4ACA-BBF1-F905541D30F9'>ТУ</option>
+                      <option value='F896D4AA-264E-40AD-BB15-4E4B754C4E74'>Разрешение</option>
+                      <option value='621A6917-5782-4A60-8312-CFE86125F9EE'>Согласование</option>
+                      <option value='BFE757F0-B255-411F-8B22-BF8CC62AF3ED'>Приказ</option>
+                      <option value='41AB9021-4B62-4AD8-B858-161113149EBB'>Доверенность</option>
+                      <option value='C29092B2-6B8D-4BD9-AD52-FE6295668714'>Устав</option>
+                      <option value='D7346DD8-E260-404E-9618-35EF47EE110A'>Иной документ</option>
+                    </select>
+                  </div>
+      
+                  <div class='input_block full-width m0'>
+                    <input type='text' name='number_doc' id='number_doc'>
+                  </div>
+      
+                  <div class='block_row full-width m0 gap-10'>
+                    <input type='date' name='date_doc' id='date_doc' class='full-width'>
+                    <p class='remove mt_20 hidden'>x</p>
+                  </div>
+      
+                </div>
+              </div>
+      
+              <a class='mt_15 text_note text_gray_100 link_block add-document'>+ Добавить документ</a>
+            </div>
+      
+            <div class='input_block full-width'>
+              <label class='required'>Вид работ</label>
+              <select
+                class='form-control'
+                name='custom-select'
+                id='custom-select'
+              >
+                <option value=''>Выберите..</option>
+                <option value='78EF9E2D-948A-4C33-BE0E-8CEAC765FF59'>Инвентаризация</option>
+                <option value='49E31FFE-8492-490D-8B60-15A74BAC32BA'>Проектная/Предпроектная работа</option>
+                <option value='27EE247F-07F6-4146-87E7-FD98AF4B8A7C'>Гидроизоляция, ремонт, реконструкция коллектора,
+                  мониторингу конструкций и т.д.
+                </option>
+                <option value='9A742674-5409-4E50-9A2D-162BC0E37EFD'>Работы на коммуникациях</option>
+                <option value='8B431F9E-56B7-4A75-890A-17F174E617DA'>Годовое обслуживание</option>
+              </select>
+            </div>
           </div>
       
           <!-- Место проведения работ -->
       
-          <h3 class='text_body text_bold text_blue_0 mt_20 m0'>Место проведения работ и вид коммуникаций</h3>
-      
-          <div class='block_column full-width align-end'>
-            <div class='block_row full-width mt_20'>
-              <label class='full-width'>Вид коммуникации</label>
-      
-              <label class='full-width'>№ коммуникации</label>
-      
-              <label class='full-width'>Адресная привязка</label>
-            </div>
-      
-            <div class='block_row full-width max_640_column'>
-              <div class='input_block full-width m0'>
-                <select
-                  class='form-control'
-                  name='type_doc'
-                  id='custom-select3'
-                >
-                  <option value='Dropdown item 1'>Label One</option>
-                  <option value='Dropdown item 2'>Label Two</option>
-                  <option value='Dropdown item 3'>Label Three</option>
-                </select>
-              </div>
-      
-              <div class='alert input_block full-width m0'>
-                <input type='text' name='number_communication' id='number_communication'>
-              </div>
-      
-              <div class='input_block full-width m0'>
-                <input type='date' name='address_communication' id='address_communication'>
-              </div>
+          <div class='accordion mt_20' data-acc='place'>
+            <div class='accordion__open active image_align' data-acc='place'>
+              <h3 class='text_body text_bold text_blue_0 m0'>Место проведения работ и вид коммуникаций</h3>
+              <span class='icon icon-arrow__up'></span>
             </div>
           </div>
       
-          <p class='mt_15 text_note text_gray_100'>+Добавить документ</p>
       
-          <div class='mt_10 full-width'>
-            <div class='input_block'>
-              <label>Добавьте необходимый коллектор для посещения</label>
-              <input type='text' placeholder='Поиск коллектора или ДП по названию'>
-            </div>
-            
-            <div class='block_column collector mt_20'>
-              <p class='text_note text_gray_200'>Выбрать вообще всё..</p>
-            
-              <div class='header__accordion block_column mt_20'>
-                <div class='accordion image_align' data-acc='collector'>
-                  <div class='accordion__open image_align' data-acc='collector'>
-                    <img src='../assets/images/arrow__dropDown__kollektors.svg' alt='arrow'>
-                    <span class='text_body text_blue_0 text_med'>РЭК-1</span>
-                  </div>
-            
-                  <span class='text_note  max_380'>Выбрать всё..</span>
+          <div class='panel active full-width'>
+      
+      
+            <div class='communication__wrapper'>
+      
+              <div class='block_column full-width align-end communication__list'>
+                <div class='block_row full-width mt_20'>
+                  <label class='full-width required'>Вид коммуникации</label>
+      
+                  <label class='full-width required'>№ коммуникации</label>
+      
+                  <label class='full-width required'>Адресная привязка</label>
                 </div>
-            
-                <div class='panel ml_20 mt_20'>
-                  <div class='accordion image_align' data-acc='collector_sub'>
-                    <div class='accordion__open image_align' data-acc='collector_sub'>
-                      <img src='../assets/images/arrow__dropDown__kollektors.svg' alt='arrow'>
-                      <span class='text_body text_gray_100 text_med'>С. Кудринский</span>
-                    </div>
-                    <span class='text_note text_gray_200 max_380'>Выбрать всё..</span>
+      
+                <div class='communication__item block_row full-width max_640_column document__item align-center' data-id='1'>
+                  <div class='input_block full-width m0'>
+                    <select
+                      class='form-control'
+                      name='type_doc'
+                      id='custom-select3'
+                    >
+                      <option value=''>Выберите..</option>
+                      <option value='321223CD-08AD-4D57-A647-7249AB6D12DA'>Водопровод</option>
+                      <option value='75DA1935-E1DE-4B36-9B6E-792B510C61B5'>Тепловые сети</option>
+                      <option value='E16FEBD6-124A-4260-92EF-12E334C51626'>ОВК</option>
+                      <option value='9ABA389B-8A7F-46B9-B206-0C2B8131946F'>СКЛ</option>
+                      <option value='FD930CCC-56FC-4C77-9832-3B90BA6148CB'>Кабель связи</option>
+                    </select>
                   </div>
-            
-                  <div class='panel ml_20 mt_20'>
-                    <div class='collector__name image_align active'>
-                      <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
-                      <p class='text_body2 text_blue_100 text_med'>Тверской Ямской 4-й</p>
-                    </div>
-            
-                    <div class='collector__name image_align'>
-                      <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
-                      <p class='text_body2 text_blue_100 text_med'>Фучика</p>
-                    </div>
-            
-                    <div class='collector__name image_align'>
-                      <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
-                      <p class='text_body2 text_blue_100 text_med'>Площадь Восстания</p>
-                    </div>
+      
+                  <div class='alert input_block full-width m0'>
+                    <input type='text' name='number_communication' id='number_communication'>
+                  </div>
+      
+                  <div class='block_row full-width m0 gap-10'>
+                    <input type='text' name='address_communication' id='address_communication' class='full-width'>
+                    <p class='remove mt_20 hidden'>x</p>
                   </div>
                 </div>
               </div>
-            </div>    </div>
       
-      
-          <div class='block_row align-center mt_20 full-width'>
-            <div class='input_block m0 pretty p-default check_box full-width check_box_big'>
-              <input type='checkbox' />
-              <div class='state'>
-                <label>Выбранные объекты требуют спец. допуска</label>
-              </div>
+              <p class='mt_15 text_note text_gray_100 add-communication'>+Добавить документ</p>
             </div>
       
-            <div class='image_align full-width'>
-              <input type='file' name='file' id='file' class='input_file'>
-              <label for='file' class='text_body image_align mt_5'>
-                <img class='img__add__file' src='../assets/images/clip.svg'>
-                <span class='text_gray_200 text_note text_med'>Загрузить скан-копию разрешения от ведомства</span>
-              </label>
+      
+            <!-- Collector -->
+            <div class='mt_10 full-width'>
+              <div class='input_block'>
+                <label class='required'>Добавьте необходимый коллектор для посещения</label>
+                <input name='collector-search' id='collector-search' type='text' placeholder='Поиск коллектора или ДП по названию'>
+              </div>
+              
+              <form id='collector-search-data'>
+                <input type='hidden' class='selected-collectors' name='selected-collectors'>
+              </form>
+              
+              
+              <div class='block_column collector mt_20 overflow_auto maxh_500 scroll justify-start'>
+                <p class='text_note text_gray_200 text_hover-blue_100'>Выбрать вообще всё..</p>
+              
+                <!--  -->
+                <div class='parent-layer block_column mt_20' id='item-1'>
+                  <!--  -->
+                  <div class='accordion collector__group image_align' data-acc='1' data-acc-some='true'>
+                    <div class='collector__info image_align accordion__open' data-acc='1'>
+                      <span class='icon icon-collectors__check parent-icon__check'></span>
+                      <span class='rek-name collector-value text_body text_blue_0 text_med' id='1' data-id='1'
+                            data-fullname='Какое-то полное название1' data-name='РЭК-1'>РЭК-1</span>
+                    </div>
+                    <label class='select-all__label text_note max_380'>
+                      <p class='text_gray_200 text_hover-blue_100'>Выбрать всё..<p>
+                      <input type='checkbox' class='select-all hidden'>
+                    </label>
+                  </div>
+                  <!--  -->
+              
+                  <div class='panel children-layer ml_20 mt_20' id='item-2'>
+                    <!--  -->
+                    <div class='accordion collector__sub-group image_align' data-acc='2'>
+                      <div class='collector__info image_align accordion__open' data-acc='2'>
+                        <span class='icon icon-collectors__check'></span>
+                        <span class='children-name collector-value text_body text_gray_100 text_med' id='2' data-id='2'
+                              data-fullname='Какое-то полное название2' data-name='С. Кудринский'>С. Кудринский</span>
+                      </div>
+                      <label class='select-all__label text_note text_gray_200 max_380'>
+                        <p class='text_gray_200 text_hover-blue_100'>Выбрать всё..<p>
+                        <input type='checkbox' class='select-all hidden'>
+                      </label>
+                    </div>
+                    <!--  -->
+              
+                    <div class='panel sub-children-layer ml_20 mt_20' id='parent-2'>
+                      <!--  -->
+                      <div class='collector__info collector__name image_align' id='item-3'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='3' data-id='3'
+                           data-fullname='Какое-то полное название3' data-name='Тверской Ямской 4-й'>Тверской Ямской 4-й</p>
+                      </div>
+                      <!--  -->
+                      <!--  -->
+                      <div class='collector__info collector__name image_align' id='item-4'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='4' data-id='4'
+                           data-fullname='Какое-то полное название4' data-name='Фучика'>Фучика</p>
+                      </div>
+                      <!--  -->
+                      <!--  -->
+                      <div class='collector__info collector__name image_align' id='item-5'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='5' data-id='5'
+                           data-fullname='Какое-то полное название5' data-name='Площадь Восстания'>Площадь Восстания</p>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+              
+                <div class='parent-layer block_column mt_20' id='item-6'>
+                  <div class='accordion collector__group image_align' data-acc='3' data-acc-some='true'>
+                    <div class='collector__info image_align accordion__open' data-acc='3'>
+                      <span class='icon icon-collectors__check parent-icon__check'></span>
+                      <span class='rek-name collector-value text_body text_blue_0 text_med' id='6' data-id='6'
+                            data-fullname='Какое-то полное название6' data-name='РЭК-2'>РЭК-2</span>
+                    </div>
+              
+                    <label class='select-all__label text_note max_380'>
+                      <p class='text_gray_200 text_hover-blue_100'>Выбрать всё..<p>
+                      <input type='checkbox' class='select-all hidden'>
+                    </label>
+                  </div>
+              
+                  <div class='panel children-layer ml_20 mt_20' id='item-7'>
+                    <div class='accordion collector__sub-group image_align' data-acc='4'>
+                      <div class='collector__info image_align accordion__open' data-acc='4'>
+                        <span class='icon icon-collectors__check'></span>
+                        <span class='children-name collector-value text_body text_gray_100 text_med' id='7' data-id='7'
+                              data-fullname='Какое-то полное название7' data-name='нский'>нский</span>
+                      </div>
+                      <label class='select-all__label text_note text_gray_200 max_380'>
+                        <p class='text_gray_200 text_hover-blue_100'>Выбрать всё..<p>
+                        <input type='checkbox' class='select-all hidden'>
+                      </label>
+                    </div>
+              
+                    <div class='panel sub-children-layer ml_20 mt_20' id='parent-7'>
+                      <div class='collector__info collector__name image_align' id='item-8'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='8' data-id='8'
+                           data-fullname='Какое-то полное название8' data-name='Ямской 4-й'>Ямской 4-й</p>
+                      </div>
+              
+                      <div class='collector__info collector__name image_align' id='item-9'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='9' data-id='9'
+                           data-fullname='Какое-то полное название9' data-name='Фучика'>Фучика</p>
+                      </div>
+              
+                      <div class='collector__info collector__name image_align' id='item-10'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='10' data-id='10'
+                           data-fullname='Какое-то полное название10' data-name='Восстания'>Восстания</p>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class='panel children-layer ml_20 mt_20' id='item-11'>
+                    <div class='accordion collector__sub-group image_align' data-acc='5'>
+                      <div class='collector__info image_align accordion__open' data-acc='5'>
+                        <span class='icon icon-collectors__check'></span>
+                        <span class='children-name collector-value text_body text_gray_100 text_med' id='11' data-id='11'
+                              data-fullname='Какое-то полное название7' data-name='нский'>нский</span>
+                      </div>
+                      <label class='select-all__label text_note text_gray_200 max_380'>
+                        <p class='text_gray_200 text_hover-blue_100'>Выбрать всё..<p>
+                        <input type='checkbox' class='select-all hidden'>
+                      </label>
+                    </div>
+              
+                    <div class='panel sub-children-layer ml_20 mt_20' id='parent-11'>
+                      <div class='collector__info collector__name image_align' id='item-12'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='12' data-id='12'
+                           data-fullname='Какое-то полное название8' data-name='Ямской 4-й'>Ямской 4-й</p>
+                      </div>
+              
+                      <div class='collector__info collector__name image_align' id='item-13'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='13' data-id='13'
+                           data-fullname='Какое-то полное название9' data-name='Фучика'>Фучика</p>
+                      </div>
+              
+                      <div class='collector__info collector__name image_align' id='item-14'>
+                        <span class='icon icon-dropDown__check hidden'></span>
+                        <p class='sub-children-name collector-value text_body2 text_blue_100 text_med text_hover-blue_300' id='14' data-id='14'
+                           data-fullname='Какое-то полное название10' data-name='Восстания'>Восстания</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>      </div>
+      
+            <div class='block_row align-center mt_20 full-width'>
+              <div class='input_block m0 pretty p-default full-width'>
+                <input type='checkbox' />
+                <div class='state'>
+                  <label>Выбранные объекты требуют спец. допуска</label>
+                </div>
+              </div>
+      
+              <div class='image_align full-width'>
+                <input type='file' name='file' id='file' class='input_file'>
+                <label for='file' class='text_body image_align mt_5 relative'>
+                  <p class='icon icon-clip'></p>
+                  <span class='text_gray_200 text_note text_med'>Загрузить скан-копию разрешения от ведомства</span>
+                  <p class='clear hidden'>x</p>
+                </label>
+              </div>
             </div>
           </div>
         </div>
       
         <!-- Добавьте необходимых сотрудников -->
-      
-        <h3 class='text_body text_bold text_blue_0 mt_20 m0'>Добавьте необходимых сотрудников в заявку одним из трёх
-          способов</h3>
-      
-        <p class='mt_20 text_note text_gray_100'>
-          Вы можете добавить сотрудников в заявку, импортировав их из заранее подготовленного Excel-файла установленного
-          формата, или добавить сотрудников в заявку из общего списка сотрудников или добавить нового сотрудника вручную
-          заполнив форму. Вы можете комбинировать все три способа. При совпадении серии и номера паспорта сотрудника в заявку
-          попадет тот сотрудник, который был добавлен последним.
-        </p>
-      
-        <div class='button_block gap-10 mt_20 max_1024_column'>
-          <button class='button button_svg fit-content m0 max_1024_fill-w-unset full-width'>
-            <img src='../assets/images/exel__img.svg' alt='exel'>
-            <p class='text_note text_blue_0 text_bold'>Загрузить сотрудников из Excel</p>
-          </button>
-      
-          <button id='modal__open' class='button button_svg full-width m0'>
-            <img src='../assets/images/add__from__list.svg' alt='exel'>
-            <p class='text_note text_blue_0 text_bold'>Выбрать из списка</p>
-          </button>
-      
-          <a href='add-employee.html' class='full-width max_1024_fill-w-unset max_1024_full-width'>
-            <button class='button button_svg m0 max_1024_full-width'>
-              <img src='../assets/images/add__button.svg' alt='exel'>
-              <p class='text_note text_blue_0 text_bold'>Добавить сотрудников</p>
-            </button>
-          </a>
+        <div class='accordion mt_40' data-acc='add-employee'>
+          <div class='accordion__open active image_align' data-acc='add-employee'>
+            <h3 class='text_body text_bold text_blue_0 m0'>Добавьте необходимых сотрудников в заявку одним из трёх
+              способов</h3>
+            <span class='icon icon-arrow__up'></span>
+          </div>
         </div>
       
-        <p class='mt_20 ml_80'>
-          <a class='text_note text_med link_underline'>«Где взять Excel-файл?»</a>
-        </p>
+        <div class='panel active full-width'>
+      
+      
+          <p class='mt_20 text_note text_gray_100'>
+            Вы можете добавить сотрудников в заявку, импортировав их из заранее подготовленного Excel-файла установленного
+            формата, или добавить сотрудников в заявку из общего списка сотрудников или добавить нового сотрудника вручную
+            заполнив форму. Вы можете комбинировать все три способа. При совпадении серии и номера паспорта сотрудника в
+            заявку
+            попадет тот сотрудник, который был добавлен последним.
+          </p>
+      
+          <div class='button_block gap-10 mt_20 max_1024_column'>
+            <button class='button button_svg fit-content m0 max_1024_fill-w-unset full-width modal-trigger' data-modal-trigger='exel_modal'>
+              <span class='icon icon-exel__img'></span>
+      
+              <p class='text_note text_blue_0 text_bold'>Загрузить сотрудников из Excel</p>
+            </button>
+      
+            <button id='modal__open' class='button button_svg full-width m0 modal-trigger' data-modal-trigger='employee_modal'>
+              <span class='icon icon-add__from__list'></span>
+              <p class='text_note text_blue_0 text_bold'>Выбрать из списка</p>
+            </button>
+      
+            <a href='add-employee.html' class='full-width max_1024_fill-w-unset max_1024_full-width'>
+              <button class='button button_svg m0 max_1024_full-width'>
+                <span class='icon icon-user-plus'></span>
+                <p class='text_note text_blue_0 text_bold'>Добавить сотрудников</p>
+              </button>
+            </a>
+          </div>
+      
+          <p class='mt_20 ml_80'>
+            <a class='text_note text_med link_underline modal-trigger' data-modal-trigger='exel-help_modal'>«Где взять Excel-файл?»</a>
+          </p>
+        </div>
+      
+      
+        <!-- Добавьте необходимых сотрудников | Выбери, который нравится -->
+      
+        <div class='mt_40 card__wrapper block_column'>
+          <div class='accordion' data-acc='add-employee1'>
+            <div class='accordion__open active image_align' data-acc='add-employee1'>
+              <h3 class='text_body text_bold text_blue_0 m0'>Добавьте необходимых сотрудников в заявку одним из трёх
+                способов</h3>
+              <span class='icon icon-arrow__up'></span>
+            </div>
+          </div>
+      
+      
+          <div class='panel active full-width'>
+      
+            <p class='mt_20 text_note text_gray_100'>
+              Вы можете добавить сотрудников в заявку, импортировав их из заранее подготовленного Excel-файла установленного
+              формата, или добавить сотрудников в заявку из общего списка сотрудников или добавить нового сотрудника вручную
+              заполнив форму. Вы можете комбинировать все три способа. При совпадении серии и номера паспорта сотрудника в
+              заявку
+              попадет тот сотрудник, который был добавлен последним.
+            </p>
+      
+            <div class='button_block gap-10 mt_20 max_1024_column full-width'>
+              <button class='button button_svg fit-content m0 max_1024_fill-w-unset full-width modal-trigger' data-modal-trigger='exel_modal'>
+                <span class='icon icon-exel__img'></span>
+                <p class='text_note text_blue_0 text_bold'>Загрузить сотрудников из Excel</p>
+              </button>
+      
+              <button id='modal__open' class='button button_svg full-width m0 modal-trigger' data-modal-trigger='employee_modal'>
+                <span class='icon icon-add__from__list'></span>
+                <p class='text_note text_blue_0 text_bold'>Выбрать из списка</p>
+              </button>
+      
+              <a href='add-employee.html' class='full-width max_1024_fill-w-unset max_1024_full-width'>
+                <button class='button button_svg m0 max_1024_full-width'>
+                  <span class='icon icon-user-plus'></span>
+                  <p class='text_note text_blue_0 text_bold'>Добавить сотрудников</p>
+                </button>
+              </a>
+            </div>
+      
+            <p class='mt_20 ml_80'>
+              <a class='text_note text_med link_underline modal-trigger' data-modal-trigger='exel-help_modal'>«Где взять Excel-файл?»</a>
+            </p>
+          </div>
+        </div>
       
         <div class='mt_20'>
           <div class='card__wrapper card_block full-width'>
             <!--  <div class=' full-width block_column'>-->
           
-            <h3 class='text_body text_bold text_blue_0 m0'>Добавьте необходимых сотрудников в заявку одним из трёх</h3>
+            <div class='accordion' data-acc='employee-edit'>
+              <div class='accordion__open active image_align' data-acc='employee-edit'>
+                <h3 class='text_body text_bold text_blue_0 m0'>Заявленные сотрудники в заявке</h3>
+                <span class='icon icon-arrow__up'></span>
+              </div>
+            </div>
           
-            <div class='table__wrapper scroll'>
-              <table>
-                <thead>
-                <tr>
-                  <th class='th_300'>
-                    <div class='th_text th_text_2'>
-                      <div class='pretty p-default check_box'>
-                        <input type='checkbox' />
-                        <div class='state'>
-                          <label class='text_gray_100'>Ф.И.О</label>
+          
+            <div class='panel active full-width'>
+          
+              <div class='mt_20'>
+                <div class='search '>
+                
+                  <div class='block_row full-width justify-start flex_4 align-center max_480_column max_480_align-start gap-10'>
+                    <div class='dropdown hidden' id='action-dropdown'>
+                      <span class='dropdown__current'>Выбрать действие</span>
+                    
+                      <ul class='dropdown__list'>
+                        <li
+                          class='dropdown__item'
+                          data-modal-text='Вы уверены что хотите разблокировать сотрудников:'
+                          data-button-text='ДА, разблокировать'
+                          data-value='unblock'
+                          id='unblock'
+                        >
+                          Разблоокировать
+                        </li>
+                        <li
+                          class='dropdown__item'
+                          data-modal-text='Вы уверены что хотите заблокировать сотрудников:'
+                          data-button-text='ДА, заблокировать'
+                          data-value='block'
+                          id='block'
+                        >
+                          Заблокировать
+                        </li>
+                        <li
+                          class='dropdown__item'
+                          data-modal-text='Вы уверены что хотите редактировать сотрудников:'
+                          data-button-text='ДА, редактировать'
+                          data-value='edit'
+                          id='edit'
+                        >
+                          Редактировать
+                        </li>
+                        <li
+                          class='dropdown__item'
+                          data-modal-text='Вы уверены что хотите скопировать сотрудников:'
+                          data-button-text='ДА, скопировать'
+                          data-value='copy'
+                          id='copy'
+                        >
+                          Копировать
+                        </li>
+                        <li
+                          class='dropdown__item'
+                          data-modal-text='Вы уверены что хотите удалить сотрудников:'
+                          data-button-text='ДА, удалить'
+                          data-value='delete'
+                          id='delete'
+                        >
+                          Удалить
+                        </li>
+                      </ul>
+                    
+                      <div class='dropdown__info'>
+                        <input type='hidden' class='selected-id' name='selected-id' value=''>
+                        <input type='hidden' class='selected-action' name='selected-action' value=''>
+                      </div>
+                    </div>
+                    
+                    <div class='modal__wrapper' id='action-modal'>
+                      <div class='modal card__wrapper maxw_600 minh_250 p40'>
+                        <span class='icon icon-close modal__close close'></span>
+                        <div class='modal__header'></div>
+                        <div class='modal__content image_justify gap-40'>
+                          <span class='icon icon-attention__info'></span>
+                          <div class='block_column gap-15'>
+                            <p class='text_gray_100 text_bold text_body action-modal-text'></p>
+                            <p class='text_vbold text_body text_blue_0 action-modal-list-reference hidden'></p>
+                          </div>
+                        </div>
+                        <div class='modal__menu button_block'>
+                          <button class='button close'>Отмена</button>
+                          <button class='button button_blue action-button-text' data-action=''></button>
                         </div>
                       </div>
-                      <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
                     </div>
-                  </th>
-          
-                  <th class='th_200'>
-                    <p>Дата и место рождения</p>
-                  </th>
-          
-                  <th class='th_150'>
-                    <p>Гражданство</p>
-                  </th>
-          
-                  <th class='th_150'>
-                    <p>Серия и номер документа</p>
-                  </th>
-          
-                  <th class='th_300'>
-                    <p>Адрес регистрации</p>
-                  </th>
-          
-                  <th class='th_200'>
-                    <p>Должность</p>
-                  </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>
-                    <div class='pretty p-default check_box check_box_big'>
-                      <input type='checkbox' />
-                      <div class='state'>
-                        <label>Иванов Степан Семенович</label>
-                      </div>
+                
+                    <div class='search__form flex_2'>
+                      <input type='text' name='search' placeholder='Поиск'>
+                      <span class='icon icon-search'></span>
                     </div>
-                  </td>
-          
-                  <td>
-                    <p class='text_center'>«01» января 1999 года гор. Саратов</p>
-                  </td>
-          
-                  <td>
-                    <p class='text_center'>РФ</p>
-                  </td>
-          
-                  <td>
-                    <p>3410 654332</p>
-                  </td>
-          
-                  <td>
-                    <p>410031, Саратовская Область, г. Саратов, ул. Первомайская, д. 78 кв 314</p>
-                  </td>
-          
-                  <td>
-                    <p class='text_center'>Студент</p>
-                  </td>
-                </tr>
-          
-                </tbody>
-                <div class='menu'>
-                  <div class='menu__label'>
-                    <button class='button button_svg p' >
-                      <p class='text_body2 menu__open'>Выберите действие</p>
-                      <img class="menu__img" src="../assets/images/arrow__up.svg" alt="arrow">
-                    </button>
                   </div>
-                  <div class='menu__items card__wrapper'>
-                    <p class='text_note'>Действие 1</p>
-                    <p class='divider'></p>
-                    <p class='text_note'>Действие 2</p>
-                    <p class='divider'></p>
-                    <p class='text_note'>Действие 3</p>
-                    <p class='divider'></p>
-                    <p class='text_note'>Действие 4</p>
+                
+                  <div class='block_row align-center'>
+                    <div class='image_align choices_filter fit-content'>
+                      <label class='max_380'>Выберите год</label>
+                      <select
+                        class='form-control'
+                        name='custom-select'
+                        id='custom-select'
+                      >
+                        <option value='Dropdown item 1'>2020</option>
+                        <option value='Dropdown item 2'>2021</option>
+                        <option value='Dropdown item 3'>2022</option>
+                        <option value='Dropdown item 4'>2023</option>
+                      </select>
+                    </div>
+                
+                    <div class='search__filter image_align '>
+                      <a class='text_note text_gray_200 image_align modal-trigger' data-modal-trigger='filter_modal'>
+                        Фильтр
+                        <span class='icon icon-filter text_note'></span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </table>
-              <!--    </div>-->
+              </div>
+          
+              <div class='table__wrapper employee-table scroll'>
+                <table>
+                  <thead>
+                  <tr>
+                    <th class='th_300'>
+                      <div class='th_text th_text_2'>
+                        <div class='pretty p-default check_box'>
+                          <input type='checkbox' />
+                          <div class='state'>
+                            <label class='text_gray_0'>Ф.И.О</label>
+                          </div>
+                        </div>
+                        <span class='icon icon-table__arrow'></span>
+                      </div>
+                    </th>
+          
+                    <th class='th_200'>
+                      <p class='text_start'>Дата и место рождения</p>
+                    </th>
+          
+                    <th class='th_150'>
+                      <p class='text_start'>Гражданство</p>
+                    </th>
+          
+                    <th class='th_150'>
+                      <p class='text_start'>Серия и номер документа</p>
+                    </th>
+          
+                    <th class='th_300'>
+                      <p class='text_start'>Адрес регистрации</p>
+                    </th>
+          
+                    <th class='th_200'>
+                      <p class='text_start'>Должность</p>
+                    </th>
+          
+                    <th class='th_200'>
+                      <p class='text_start'>Имеет допуск на спец. объекты</p>
+                    </th>
+          
+                    <th class='th_200'>
+                      <p class='text_start'>Ответственный</p>
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class='table__row employee-row employee-row-reference hidden'>
+                    <td>
+                      <div class='pretty p-default check_box_big'>
+                        <input type='checkbox' />
+                        <div class='state'><label class='employee-row__name'></label></div>
+                      </div>
+                    </td>
+                    <td><p class='text_center employee-row__birthday'></p></td>
+                    <td><p class='employee-row__citizenship'></p></td>
+                    <td><p class='employee-row__docs'></p></td>
+                    <td><p class='text_center employee-row__address'></p></td>
+                    <td><p class='text_center employee-row__post'></p></td>
+                    <td><p class='text_center employee-row__allowance'></p></td>
+                    <td><p class='text_center employee-row__responsible'></p></td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class='table__row table__row_nullable'>
+                  <p>Данных для отображения нет</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div class='modal__wrapper modal-body' data-modal='filter_modal'>
+            <div class='modal card__wrapper card_500x300'>
+              <span class='icon icon-close modal__close close'></span>
+          
+              <div class='modal__content'>
+                <div class='input_block'>
+                  <label>Пропуск заблокирован?</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 2'>Нет</option>
+                  </select>
+                </div>
+          
+          
+                <div class='input_block'>
+                  <label>Ключ карта получена?</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 2'>Нет</option>
+                  </select>
+                </div>
+          
+          
+                <div class='input_block'>
+                  <label>Статус допуска в коллекторы</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 2'>Не запрашивался</option>
+                  </select>
+                </div>
+          
+          
+                <div class='input_block'>
+                  <label>Статус допуска в ведомственные коллекторы</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 2'>Зарегистрирована</option>
+                  </select>
+                </div>
+          
+          
+                <div class='input_block'>
+                  <label>Заявки</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 1'>№ СИ-00000099 от 04.12.2022</option>
+                  </select>
+                </div>
+          
+          
+                <div class='input_block'>
+                  <label>Отображать удалённых?</label>
+                  <select
+                    class='form-control'
+                    name='custom-select'
+                    id='modal-select'
+                  >
+                    <option value=''>Выбрать..</option>
+                    <option value='Dropdown item 2'>Нет</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class='modal__menu'>
+                <div class='button_block'>
+                  <button class='button full-width close'>Отменить</button>
+                  <button class='button button_blue full-width'>Применить</button>
+                </div>
+              </div>
+            </div>
+          </div>  </div>
       
         <!-- Кнопки -->
       
         <div class='button_block'>
           <button class='button'>Отменить</button>
-          <div class='block_column max_480-full-width gap-20'>
-            <button class='button button_blue'>Подать заявку</button>
-            <a class='text_body text_gray_200 text_bold'>Сохранить в черновик</a>
+          <div class='block_column gap-0 align-end'>
+            <button class='button button_blue minw_180'>Далее</button>
+            <a class='text_body text_gray_200 text_bold mt_20'>Сохранить в черновик</a>
+            <!-- Пример -->
+            <p class='text_body text_gray_200 text_med'>сохранено 31.12.2022 в 20:20</p>
           </div>
         </div>
       
-        <div class='modal__wrapper' id='modal'>
+        <div class='employee-select modal__wrapper modal-body' data-modal='employee_modal'>
           <div class='modal card__wrapper full-width card_max-w'>
-            <img class='modal__close' id='modal__close' src='../../assets/images/close.svg' alt='close'>
+            <span class='icon icon-close modal__close close'></span>
         
             <div class='modal__content'>
               <div class='input_block'>
                 <label>Добавьте необходимый коллектор для посещения</label>
-                <input type='text' placeholder='Поиск коллектора или ДП по названию'>
+                <input type='text' placeholder='Поиск коллектора или ДП по названию' id='employee-search'>
               </div>
+              
+              <form id='selected-employee'>
+                <input type='hidden' class='selected-employee__input'>
+              </form>
               
               <p class='text_note text_gray_200 mt_20'>Выбрать вообще всё..</p>
               
               <div class='employee__wrapper mt_20 scroll'>
-                <div class='employee active image_align'>
-                  <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
+              
+                <div class='employee image_align' id="employee-item-1" data-id='1' data-value='Иванов Степан Семенович, «01» января 1999 года'>
+                  <div class='info hidden'>
+                    <p class='name'>Иванов Степан Семенович</p>
+                    <p class='birthday'>«01» января 1999 года гор. Саратов</p>
+                    <p class='citizenship'>РФ</p>
+                    <p class='docs'>3410 654332</p>
+                    <p class='address'>410031, Саратовская Область, г. Саратов, ул. Первомайская, д. 78 кв 314</p>
+                    <p class='post'>Студент</p>
+                    <p class='allowance'>Не запрашивался</p>
+                    <p class='responsible'>Не запрашивался</p>
+                  </div>
+                  <span class='icon icon-dropDown__check hidden'></span>
                   <div class='block_column'>
                     <p class='text_body2 text_bold'>Иванов Степан Семенович, «01» января 1999 года</p>
-                    <p class='text_note text_gray_100 mt_20'>Допуск в ведомственные коллекторы: <span
-                      class='text_green text_red'>НЕТ</span></p>
+                    <p class='text_note text_gray_100 mt_10'>Допуск в ведомственные коллекторы: <span
+                      class='text_red'>НЕТ</span></p>
                   </div>
                 </div>
               
-                <div class='employee image_align'>
-                  <img class='hidden' src='../assets/images/dropDown__check.svg' alt='check'>
+                <div class='employee image_align' id="employee-item-2" data-id='2' data-value='Иванов Иван Иванович, «10» января 2000 года'>
+                  <div class='info hidden'>
+                    <p class='name'>Иванов Иван Иванович</p>
+                    <p class='birthday'>«10» января 2000 года гор. Саратов</p>
+                    <p class='citizenship'>РФ</p>
+                    <p class='docs'>3110 454322</p>
+                    <p class='address'>412033, Саратовская, г. Саратов, ул. Первомайская, д. 78 кв 514</p>
+                    <p class='post'>Студент</p>
+                  </div>
+                  <span class='icon icon-dropDown__check hidden'></span>
                   <div class='block_column'>
-                    <p class='text_body2 text_bold'>Иванов Степан Семенович, «01» января 1999 года</p>
-                    <p class='text_note text_gray_100 mt_20'>Допуск в ведомственные коллекторы: <span
-                      class='text_green text_red'>НЕТ</span></p>
+                    <p class='text_body2 text_bold'>Иванов Иван Иванович, «10» января 2000 года</p>
+                    <p class='text_note text_gray_100 mt_10'>Допуск в ведомственные коллекторы: <span
+                      class='text_green'>ДА</span></p>
                   </div>
                 </div>
               </div>    </div>
         
             <div class='modal__menu block_row align-center full-width'>
-              <button class='button'>Отменить</button>
-              <button class='button button_blue'>Применить</button>
+              <button class='button close'>Отменить</button>
+              <button class='button button_blue confirm-button close'>Применить</button>
             </div>
           </div>
-        </div></div>
-      
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          new Choices('#custom-select1', {
-            allowHTML: true,
-            searchEnabled: false,
-          });
-        });
-      </script>
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          new Choices('#custom-select2', {
-            allowHTML: true,
-            searchEnabled: false,
-          });
-        });
-      </script>
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          new Choices('#custom-select3', {
-            allowHTML: true,
-            searchEnabled: false,
-          });
-        });
-      </script>
+        </div>  <div class='modal__wrapper modal-body' data-modal='exel_modal'>
+          <div class='modal card__wrapper card_500x300'>
+            <span class='icon icon-close modal__close close'></span>
+            <div class='modal__header'></div>
+            <div class='modal__content block_column align-center'>
+              <span class='icon icon-success'></span>
+              <p class='mt_20 text_body2'>Прочитано строк: 2</p>
+              <p class='text_body2'>Успешно обработано и загружено: 2</p>
+              <p class='text_body2'>Не обработано: 1</p>
+        
+              <a class='mt_20'>Посмотреть отчёт</a>
+        
+            </div>
+            <div class='modal__menu block_column align-center'>
+              <p class='divider'></p>
+              <a class='mt_20 close'>OK</a>
+            </div>
+          </div>
+        </div>  <div class='modal__wrapper modal-body' data-modal='exel-help_modal'>
+          <div class='modal card__wrapper maxw_500 gap-20 p20-25'>
+            <span class='icon icon-close modal__close close'></span>
+            <div class='modal__header m0'>
+              <h3 class='text_bold text_body text_blue_0 m0'>Помощь по заполнению из Excel</h3>
+            </div>
+        
+            <div class='modal__content block_column align-start'>
+              <p class='text_note'>Прочитано строк: 2</p>
+              <a class='mt_10 text_note link_underline'>Скачать шаблон заполнения</a>
+            </div>
+        
+            <div class='modal__menu block_column align-center'>
+              <p class='divider'></p>
+              <a class='mt_20 text_blue_0 text_bold close'>Я всё понял</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -532,52 +1082,54 @@
             <img src='../assets/images/logo__footer.svg' alt='logoImg'>
           </div>
           <div class='footer__social image_align'>
-            <img src='../assets/images/vk.svg' alt='vkImg'>
-            <img src='../assets/images/telegram.svg' alt='telegram'>
+            <span class='icon icon-vk'></span>
+            <span class='icon icon-telegram'></span>
           </div>
         </div>
   
         <div class='footer__contacts'>
           <ul>
             <li class='footer__contacts__location image_align'>
-              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='icon icon-location'></span>
+  
+  
               <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
             </li>
             <li class='footer__contacts__phone image_align'>
-              <img src='../assets/images/phone.svg' alt='phoneImg'>
-              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+              <span class='icon icon-phone'></span>
+              <span class='text_bold'><a href='tel:74992222201'>+7 499 222-22-01</a></span>
             </li>
             <li class='footer__contacts__mail image_align'>
-              <img src='../assets/images/mail.svg' alt='mailImg'>
-              <span class='text_bold'>info@moscollector.ru</span>
+              <span class='icon icon-mail'></span>
+              <span class='text_bold'><a href='mail:info@moscollector.ru'>info@moscollector.ru</a></span>
             </li>
           </ul>
         </div>
   
         <div class='footer__work-time image_justify'>
           <div class='footer__work-time__img'>
-            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+            <span class='icon icon-worktime'></span>
           </div>
           <ul>
-            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
-            <li>Пятница: <span>8:00 -15:45</span></li>
-            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+            <li>Понедельник - четверг: <span>8:00 - 17:00</span></li>
+            <li>Пятница: <span>8:00 - 15:45</span></li>
+            <li>Обед: <span>с 12:00 до 12:45</span></li>
           </ul>
         </div>
       </div>
   
       <div class='footer__rights'>
-          <span class='text_body'>© 2022 АО «Москоллектор»</span>
-          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+        <span class='text_body'>© 2022 АО «Москоллектор»</span>
+        <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО
+          «Москоллектор»</a>
       </div>
   
     </div>
   </footer>
 </div>
-
 <script src='./../assets/js/app.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
-<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 
 </body>
 </html>

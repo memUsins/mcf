@@ -8,8 +8,12 @@
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
 <link rel='stylesheet' href='./../assets/css/index.css'>
 <!-- Data Picker -->
+<script src='https://code.jquery.com/jquery-3.6.3.min.js'
+        integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=' crossorigin='anonymous'></script>
+
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
-<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!--<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 <!-- Useful meta tags -->
 <meta http-equiv='x-ua-compatible' content='ie=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -17,6 +21,9 @@
 <meta name='google' content='notranslate'>
 <meta name='format-detection' content='telephone=no'>
 <meta name='description' content=''>
+
+<link rel='stylesheet' href='./../assets/lib/nice-select2.css'>
+<script src='./../assets/lib/nice-select2.js'></script>
 
 <title>UI Kit</title>
 
@@ -31,18 +38,61 @@
           <img src='../assets/images/logo.svg' alt='Sup'>
         </a>
       </div>
+  
       <div class='header_support block_row'>
         <div class='image_align'>
-          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <span class='icon icon-headphones'></span>
           <a href='' class='openModal'>Техническая поддержка</a>
         </div>
-  
-        <a href='ui-kit.html'>UI KIT</a>
       </div>
     </div>
   </header>
 
   <div style='padding: 20px;'>
+    <!--<div class='modal__wrapper' id='owner-hint_modal'>-->
+    <!--  <div class='modal card__wrapper maxw_500 gap-20 p20-25'>-->
+    <!--    <span class='icon icon-close modal__close' class='close'></span>-->
+    <!--    <div class='modal__header m0'>-->
+    <!--    </div>-->
+    
+    <!--    <div class='modal__content block_column align-center text_center gap-20'>-->
+    <!--      <span class='icon icon-success'></span>-->
+    
+    <!--      <p class='mt_20'>Спасибо Ваши данные успешно отправлены!!</p>-->
+    
+    <!--      <h3 class='text_body text_bold text_blue_0'>Номер вашей заявки 5424855221</h3>-->
+    
+    <!--      <p>На Вашу электронную почту выслано письмо с подтверждением и номером вашей заявки.-->
+    <!--        Перейдите, пожалуйста, по ссылке в письме и завершите регистрацию.</p>-->
+    <!--    </div>-->
+    
+    <!--    <div class='modal__menu block_column align-center'>-->
+    <!--      <p class='divider'></p>-->
+    <!--      <a class='mt_20 text_blue_0 text_bold' class='close'>OK</a>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+    
+    <div class='modal__wrapper modal-body' data-modal='exel_modal'>
+      <div class='modal card__wrapper card_500x300'>
+        <span class='icon icon-close modal__close close'></span>
+        <div class='modal__header'></div>
+        <div class='modal__content block_column align-center'>
+          <span class='icon icon-success'></span>
+          <p class='mt_20 text_body2'>Прочитано строк: 2</p>
+          <p class='text_body2'>Успешно обработано и загружено: 2</p>
+          <p class='text_body2'>Не обработано: 1</p>
+    
+          <a class='mt_20'>Посмотреть отчёт</a>
+    
+        </div>
+        <div class='modal__menu block_column align-center'>
+          <p class='divider'></p>
+          <a class='mt_20 close'>OK</a>
+        </div>
+      </div>
+    </div>
+    <button class='button' id='modal__open'>Открой меня!</button>
     <!-- UI Inputs -->
     <div class='input_block'>
       <label for='text'>Просто поле</label>
@@ -54,7 +104,8 @@
       <input type='text' name='text' id='text1' placeholder='Placeholder'>
     
       <div class='alert input_error alert__input '>
-        <img class='alert__view' src='../assets/images/attention_alert.svg' alt='Error'>
+        <img src='../assets/images/message__picket.svg'>
+    
         <div class='alert__block'>
           <div class='alert__info alert__info_error full-width'>
             Error text
@@ -68,7 +119,7 @@
       <input type='text' name='text' id='text2' placeholder='Placeholder'>
     
       <div class='alert__input alert__input_hint'>
-        <img class='alert__view' src='../assets/images/message__picket.svg' alt='Error'>
+        <img src='../assets/images/message__picket.svg'>
         <div class='alert__block'>
           <div class='alert__info full-width'>
             Если работы планируются на выходной или праздничный день, обязательно приложите разрешение от руководства
@@ -97,7 +148,7 @@
       <button class='button'>Button white</button>
       <button class='button button_blue'>Button blue</button>
       <button class='button button_svg'>
-        <img src='../assets/images/alert__info.svg' alt='svg'>
+        <span class='icon icon-alert__info'></span>
         <span>Button svg</span>
       </button>
       <button class='button button_blue button_fullWidth'>Button fullwidth</button>
@@ -130,7 +181,7 @@
     </div>
     
     <div class='card__wrapper image_align'>
-      <img src='../assets/images/alert__info.svg' alt='info'>
+      <span class='icon icon-alert__info'></span>
       С картинкой | С 01.01.2023 АО «Москоллектор» вводит новый цифровой порядок допуска на объекты предприятия.
       Подача заявок на допуск
       производится в новом Личном Кабинете АО «Москоллектор» Для входа в Личный Кабинет используйте ваш e-mail адрес и
@@ -147,7 +198,7 @@
     
     
     
-    <div class='input_block pretty p-default check_box fit-content'>
+    <div class='input_block pretty p-default fit-content'>
       <input type='checkbox' />
       <div class='state'>
         <label>Нажми на коробку</label>
@@ -192,6 +243,7 @@
         new Choices('#custom-select1', {
           allowHTML: true,
           searchEnabled: false,
+          itemSelectText: '',
         });
       });
     </script>  <div class='table__wrapper'>
@@ -203,39 +255,39 @@
               <div class='pretty p-default check_box'>
                 <input type='checkbox' />
                 <div class='state'>
-                  <label class='text_gray_100'>Чекбокс и текст</label>
+                  <label class='text_gray_0'>Чекбокс и текст</label>
                 </div>
               </div>
-              <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+              <span class='icon icon-table__arrow'></span>
             </div>
           </th>
     
           <th class='th_150'>
             <div class='th_text'>
-              <img src='../assets/images/lock.svg' alt='lock'>
+              <span class='icon icon-lock'></span>
             </div>
           </th>
     
           <th class='th_200'>
             <div class='th_text th_text_center'>
-              <img src='../assets/images/lock.svg' alt='lock'>
+              <span class='icon icon-lock'></span>
             </div>
           </th>
     
           <th class='th_250'>
             <div class='th_text th_text_2'>
               <div class='image_align th_text_end'>
-                <img src='../assets/images/lock.svg' alt='arrow'>
+                <span class='icon icon-lock'></span>
                 <p>lorem</p>
               </div>
     
-              <img src='../assets/images/table__arrow__down.svg' alt='arrow'>
+              <span class='icon icon-table__arrow'></span>
             </div>
           </th>
         </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr class="table__row">
           <td>
             <p>
               Если не задавать размер он будет на всю свободную ширину. Нельзя написать max-width..
@@ -256,7 +308,7 @@
           </td>
         </tr>
     
-        <tr class='tr_active'>
+        <tr class='table__row tr_active'>
           <td>
             <p>
               Если не задавать размер он будет на всю свободную ширину. Нельзя написать max-width..
@@ -281,59 +333,7 @@
     </div>  <div class='toggle_wrapper'>
       <input class='toggle' type='checkbox' id='toggle' name='blocked'>
       <label for='toggle'></label>
-    </div>  <div class='modal__wrapper' id='filter_modal'>
-      <div class='modal modal__wrapper card__wrapper card_500x300'>
-        <img class='modal__close' id='modal__close' src='../assets/images/close.svg' alt='close'>
-        <div class='modal__header'>Фильтры:</div>
-        <div class='modal__content'>
-          <div class='mt_40 input_block'>
-            <label>Пропуск заблокирован?</label>
-            <select
-              class='form-control'
-              name='custom-select'
-              id='custom-select1'
-            >
-              <option value='Dropdown item 1'>Не выбрано</option>
-              <option value='Dropdown item 2'>Нет</option>
-              <option value='Dropdown item 3'>Да</option>
-            </select>
-          </div>
-        </div>
-        <div class='modal__menu'>
-          <div class='button_block'>
-            <button class='button full-width'>Отменить</button>
-            <button class='button button_blue full-width'>Применить</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        new Choices('#custom-select1', {
-          allowHTML: true,
-          searchEnabled: false,
-        });
-      });
-    </script>
-    
-    <script>
-      const modal = document.querySelector('#filter_modal');
-    
-      //open modal
-      document.addEventListener('click', (e) => {
-        if (e.target.matches('#modal__open')) {
-          modal.classList.add('modal__active');
-        }
-      });
-    
-      // close modal
-      document.addEventListener('click', (e) => {
-        if (e.target.matches('.modal__active') || e.target.matches('#modal__close')) {
-          modal.classList.remove('modal__active');
-        }
-      });
-    </script>  <div class='input_block'>
+    </div>  <div class='input_block'>
     
       <div class='input_block fit-content'>
         <label>Pick a date:</label>
@@ -393,43 +393,46 @@
             <img src='../assets/images/logo__footer.svg' alt='logoImg'>
           </div>
           <div class='footer__social image_align'>
-            <img src='../assets/images/vk.svg' alt='vkImg'>
-            <img src='../assets/images/telegram.svg' alt='telegram'>
+            <span class='icon icon-vk'></span>
+            <span class='icon icon-telegram'></span>
           </div>
         </div>
   
         <div class='footer__contacts'>
           <ul>
             <li class='footer__contacts__location image_align'>
-              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='icon icon-location'></span>
+  
+  
               <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
             </li>
             <li class='footer__contacts__phone image_align'>
-              <img src='../assets/images/phone.svg' alt='phoneImg'>
-              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+              <span class='icon icon-phone'></span>
+              <span class='text_bold'><a href='tel:74992222201'>+7 499 222-22-01</a></span>
             </li>
             <li class='footer__contacts__mail image_align'>
-              <img src='../assets/images/mail.svg' alt='mailImg'>
-              <span class='text_bold'>info@moscollector.ru</span>
+              <span class='icon icon-mail'></span>
+              <span class='text_bold'><a href='mail:info@moscollector.ru'>info@moscollector.ru</a></span>
             </li>
           </ul>
         </div>
   
         <div class='footer__work-time image_justify'>
           <div class='footer__work-time__img'>
-            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+            <span class='icon icon-worktime'></span>
           </div>
           <ul>
-            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
-            <li>Пятница: <span>8:00 -15:45</span></li>
-            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+            <li>Понедельник - четверг: <span>8:00 - 17:00</span></li>
+            <li>Пятница: <span>8:00 - 15:45</span></li>
+            <li>Обед: <span>с 12:00 до 12:45</span></li>
           </ul>
         </div>
       </div>
   
       <div class='footer__rights'>
-          <span class='text_body'>© 2022 АО «Москоллектор»</span>
-          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+        <span class='text_body'>© 2022 АО «Москоллектор»</span>
+        <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО
+          «Москоллектор»</a>
       </div>
   
     </div>
@@ -438,7 +441,5 @@
 
 <script src='./../assets/js/app.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
-<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
-
 </body>
 </html>

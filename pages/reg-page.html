@@ -8,8 +8,12 @@
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' />
 <link rel='stylesheet' href='./../assets/css/index.css'>
 <!-- Data Picker -->
+<script src='https://code.jquery.com/jquery-3.6.3.min.js'
+        integrity='sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=' crossorigin='anonymous'></script>
+
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
-<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>
+<!--<script type='text/javascript' src='https://unpkg.com/dpicker@5.2.0/dist/dpicker.all.js'></script>-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js'></script>
 <!-- Useful meta tags -->
 <meta http-equiv='x-ua-compatible' content='ie=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -17,6 +21,9 @@
 <meta name='google' content='notranslate'>
 <meta name='format-detection' content='telephone=no'>
 <meta name='description' content=''>
+
+<link rel='stylesheet' href='./../assets/lib/nice-select2.css'>
+<script src='./../assets/lib/nice-select2.js'></script>
 
 <title>Moscollector | Авторизация</title>
 
@@ -31,13 +38,12 @@
           <img src='../assets/images/logo.svg' alt='Sup'>
         </a>
       </div>
+  
       <div class='header_support block_row'>
         <div class='image_align'>
-          <img src='../assets/images/headphones.svg' alt='Sup'>
+          <span class='icon icon-headphones'></span>
           <a href='' class='openModal'>Техническая поддержка</a>
         </div>
-  
-        <a href='ui-kit.html'>UI KIT</a>
       </div>
     </div>
   </header>
@@ -49,7 +55,7 @@
       <h3 class='text_blue_0'>Заполните реквизиты контрагента</h3>
       <div class='form__info'>
         <div class='card__wrapper image_align'>
-          <img src='../assets/images/attention.svg' alt='attention'>
+          <span class='icon icon-attention'></span>
           <p>
             Электронное заявление на регистрацию в Личном Кабинете АО «Москоллектор» подписывается уполномоченным лицом
             юридического лица или индивидуального предпринимателя усиленной квалифицированной электронной подписью. Такое
@@ -69,24 +75,24 @@
             </div>
   
             <div class='input_block'>
-              <label for='name'>Полное наименование организации</label>
+              <label class='required' for='name'>Полное наименование организации</label>
               <input type='text' name='name' id='name'>
             </div>
   
             <div class='input_row max_480_column max_480_gap0'>
               <div class='input_block'>
-                <label for='inn'>ИНН организации</label>
+                <label class='required' for='inn'>ИНН организации</label>
                 <input type='number' name='inn' id='inn'>
               </div>
   
               <div class='input_block'>
-                <label for='kpp'>КПП организации</label>
+                <label class='required' for='kpp'>КПП организации</label>
                 <input type='number' name='kpp' id='kpp'>
               </div>
             </div>
   
             <div class='input_block'>
-              <label for='ogrn'>ОГРН организации</label>
+              <label class='required' for='ogrn'>ОГРН организации</label>
               <input type='number' name='ogrn' id='ogrn'>
             </div>
           </div>
@@ -94,22 +100,22 @@
   
           <div>
             <div class='input_block'>
-              <label for='email'>Введите адрес электронной почты</label>
+              <label class='required' for='email'>Введите адрес электронной почты</label>
               <input type='text' name='email' id='email'>
             </div>
   
             <div class='input_block'>
-              <label for='address'>Юридический адрес</label>
+              <label class='required' for='address'>Юридический адрес</label>
               <input type='text' name='address' id='address'>
             </div>
   
             <div class='input_block'>
-              <label for='address'>Почтовый адрес</label>
+              <label class='required' for='address'>Почтовый адрес</label>
               <input type='text' name='address' id='address1'>
             </div>
   
             <div class='input_block'>
-              <label for='address'>Номера телефонов / факс компании</label>
+              <label class='required' for='address'>Номера телефонов / факс компании</label>
               <input type='text' name='address' id='address2'>
             </div>
           </div>
@@ -120,15 +126,14 @@
           <div>
             <div class='mt_40'>
               <input type='file' name='file' id='file' class='input_file'>
-              <label for='file'>
-                <p class='image_align'>
-                  <img src='../assets/images/clip.svg' />
-                  <span class='text_body2 text_gray_200'>Нажмите здесь, чтобы загрузить скан - копию доверенности</span>
-                </p>
+              <label for='file' class='image_align relative'>
+                <p class='icon icon-clip'></p>
+                <span class='text_body2 text_gray_200'>Нажмите здесь, чтобы загрузить скан - копию доверенности</span>
+                <p class='clear hidden'>x</p>
               </label>
             </div>
   
-            <div class='input_block pretty p-default check_box'>
+            <div class='input_block pretty p-default'>
               <input type='checkbox' />
               <div class='state'>
                 <label class='text_body2'>Подписант действует на основании Доверенности</label>
@@ -140,12 +145,12 @@
           <div class='max_720_column-reverse'>
             <button class='button button_blue button_fullWidth'>Войти</button>
   
-            <div class='input_block check_box_big pretty p-default check_box'>
+            <div class='input_block check_box_big pretty p-default'>
               <input type='checkbox' />
               <div class='state'>
-                <label>
-                  <span class='text_body2'>Я полностью принимаю все пункты положения
-                    <a class='link_underline text_body2 link_gray'>Cоглашение о присоединении к сервису «Личный Кабинет» АО «Москоллектор»</a>
+                <label class='required'>
+                  <span class='text_body2 text_height_0'>Я полностью принимаю все пункты положения
+                    <a class='link_underline text_body2 link_gray' href=''>Cоглашение о присоединении к сервису «Личный Кабинет» АО «Москоллектор»</a>
                   </span>
                 </label>
               </div>
@@ -172,43 +177,46 @@
             <img src='../assets/images/logo__footer.svg' alt='logoImg'>
           </div>
           <div class='footer__social image_align'>
-            <img src='../assets/images/vk.svg' alt='vkImg'>
-            <img src='../assets/images/telegram.svg' alt='telegram'>
+            <span class='icon icon-vk'></span>
+            <span class='icon icon-telegram'></span>
           </div>
         </div>
   
         <div class='footer__contacts'>
           <ul>
             <li class='footer__contacts__location image_align'>
-              <img src='../assets/images/location.svg' alt='locationImg'>
+              <span class='icon icon-location'></span>
+  
+  
               <span class='text_bold'>129090, г.&nbsp;Москва, 1-й Коптельский пер., д.&nbsp;16, стр.&nbsp;4</span>
             </li>
             <li class='footer__contacts__phone image_align'>
-              <img src='../assets/images/phone.svg' alt='phoneImg'>
-              <span class='text_bold'>+7&nbsp;499&nbsp;222-22-01</span>
+              <span class='icon icon-phone'></span>
+              <span class='text_bold'><a href='tel:74992222201'>+7 499 222-22-01</a></span>
             </li>
             <li class='footer__contacts__mail image_align'>
-              <img src='../assets/images/mail.svg' alt='mailImg'>
-              <span class='text_bold'>info@moscollector.ru</span>
+              <span class='icon icon-mail'></span>
+              <span class='text_bold'><a href='mail:info@moscollector.ru'>info@moscollector.ru</a></span>
             </li>
           </ul>
         </div>
   
         <div class='footer__work-time image_justify'>
           <div class='footer__work-time__img'>
-            <img src='../assets/images/worktime.svg' alt='workTimeImg'>
+            <span class='icon icon-worktime'></span>
           </div>
           <ul>
-            <li>Понедельник–четверг: <span>8:00- 17:00</span></li>
-            <li>Пятница: <span>8:00 -15:45</span></li>
-            <li>Обед: <span>с&nbsp;12:00 до&nbsp;12:45</span></li>
+            <li>Понедельник - четверг: <span>8:00 - 17:00</span></li>
+            <li>Пятница: <span>8:00 - 15:45</span></li>
+            <li>Обед: <span>с 12:00 до 12:45</span></li>
           </ul>
         </div>
       </div>
   
       <div class='footer__rights'>
-          <span class='text_body'>© 2022 АО «Москоллектор»</span>
-          <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО «Москоллектор»</a>
+        <span class='text_body'>© 2022 АО «Москоллектор»</span>
+        <a href='policy.html' class='text_body text_blue_200'>Соглашение о пользовании сервисом «Личный Кабинет» АО
+          «Москоллектор»</a>
       </div>
   
     </div>
@@ -217,7 +225,5 @@
 
 <script src='./../assets/js/app.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js'></script>
-<script type='module' src='https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js'></script>
-
 </body>
 </html>

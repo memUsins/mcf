@@ -248,34 +248,157 @@
           </div>
         </div>
       </div>      
+      <!--todo: Блок с 04_07, 04_09 и  04_10 максимально похожи. Сделал общий шаблон, чтобы не путаться.-->
+      
       <div class='section__body full-width'>
-        <h1>Личный кабинет потребителя</h1>
-        <h2>Последние заявки на допуск</h2>
-        <div class='card__wrapper gap-40 appeal_wrapper card_column m0'>
-          <div class='block_row full-width max_1024_column'>
-            <div>
-              <h4><a class='link_no-underline text_body text_blue_200 text_bold'>Заявка № AB-00001</a></h4>
-              <p class='text_small mt_10'>Дата подачи: «28» декабря 2022 года</p>
-              <p class='text_small mt_10'>Дата последних изменений: «28» декабря 2022 года</p>
-              <p class='text_body mt_20'>Работы по предупреждению или ликвидации аварий</p>
-              <p class='text_small mt_20'>Статус заявки: <span
-                class='status status_consideration_yellow'>Зарегистрирована</span></p>
-            </div>
+        <h1 class='word-break'>Заявка на сотрудников СИ-00000143 от 28.12.2022</h1>
       
-            <div class='full-width word-break'>
-              <p class='title_bg'>Сведения о сертификате ЭП</p>
-              <p class='mt_20 text_note text_med'>Сертификат: 1200608DFC43D60CD586ECB1C8000100608DFC</p>
-              <p class='mt_10 text_note text_med'>Владелец: Сергей Николаевич</p>
-              <p class='mt_10 text_note text_med'>Дата подписания документа: «28» декабря 2022 года
-              </p>
-            </div>
+        <h3 class='text_body text_bold text_blue_0'>Оформления допуска для выполнения работ по гидроизоляции, ремонту,
+          реконструкции коллектора, мониторингу строительных конструкций и т.д.</h3>
+      
+        <!-- Инофрмация -->
+      
+        <div class='card__wrapper block_column full-width gap-5'>
+          <h3 class='text_body text_bold text_blue_0'>Общая информация по заявке</h3>
+      
+          <div class='text_block'>
+            <span>Владелец коммуникаций:</span>
+            <p>ООО "ВАРДИ", ИНН: 7703702486</p>
+          </div>
+      
+          <div class='text_block'>
+            <span>Документ основание для проведения работ:</span>
+            <p>Ордер №2 от 01 декабря 2022</p>
+          </div>
+      
+          <div class='text_block'>
+            <span>Вид работ:</span>
+            <p>Выполнение работ по гидроизоляции, ремонту, реконструкции коллектора, мониторингу строительных конструкций </p>
           </div>
       
       
-          <div class='image_align image_justify-end full-width'>
-            <a>Все сообщения</a>
-            <span class='icon icon-arrow__right'></span>
+          <!-- Место проведения работ -->
+      
+          <h3 class='text_body text_bold text_blue_0 mt_40 '>Место проведения работ и вид коммуникаций</h3>
+      
+          <div class='full-width collector_employee gap-5 block_column'>
+            <div class='block_row justify-start max_480_column'>
+          
+              <div class='text_block text_block-column'>
+                <span class='word-break'>Вид коммуникации</span>
+                <p>Тепловые сети</p>
+              </div>
+          
+              <div class='text_block text_block-column'>
+                <span class='word-break'>№ коммуникации</span>
+                <p>1</p>
+              </div>
+          
+              <div class='text_block text_block-column'>
+                <span class='word-break'>Адресная привязка</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, sunt?</p>
+              </div>
+            </div>
+          
+            <div class='text_block'>
+              <span>Коллектор:</span>
+              <p>Тверской Ямской 4-й, С. Кудринский, РЭК-1</p>
+            </div>
+          
+            <div class='text_block'>
+              <span>Коллектор:</span>
+              <p>Тверской Ямской 4-й, С. Кудринский, РЭК-1</p>
+            </div>
+          
           </div>
+          <a class='text_end full-width text_body2'>Вернуться к редактированию</a>
+      
+        </div>
+      
+        <div class='card__wrapper card_block full-width'>
+          <!--  <div class=' full-width block_column'>-->
+        
+        
+          <!-- Место проведения работ -->
+          <div class='accordion' data-acc='employees'>
+            <div class='accordion__open active image_align' data-acc='employees'>
+              <h3 class='text_body text_bold text_blue_0 m0'>Заявленные сотрудники в заявке</h3>
+              <span class='icon icon-arrow__up'></span>
+            </div>
+          </div>
+        
+        
+          <div class='panel active full-width'>
+        
+            <div class='table__wrapper scroll'>
+              <table>
+                <thead>
+                <tr>
+                  <th class='th_300'>
+                    <div class='th_text th_text_2'>
+                      <p class='text_gray_100'>Ф.И.О</p>
+                      <span class='icon icon-table__arrow'></span>
+                    </div>
+                  </th>
+        
+                  <th class='th_200'>
+                    <p>Дата и место рождения</p>
+                  </th>
+        
+                  <th class='th_150'>
+                    <p>Гражданство</p>
+                  </th>
+        
+                  <th class='th_150'>
+                    <p>Серия и номер документа</p>
+                  </th>
+        
+                  <th class='th_300'>
+                    <p>Адрес регистрации</p>
+                  </th>
+        
+                  <th class='th_200'>
+                    <p>Должность</p>
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table__row">
+                  <td>
+                    <p>Иванов Степан Семенович</p>
+                  </td>
+        
+                  <td>
+                    <p class='text_center'>«01» января 1999 года гор. Саратов</p>
+                  </td>
+        
+                  <td>
+                    <p class='text_center'>РФ</p>
+                  </td>
+        
+                  <td>
+                    <p>3410 654332</p>
+                  </td>
+        
+                  <td>
+                    <p>410031, Саратовская Область, г. Саратов, ул. Первомайская, д. 78 кв 314</p>
+                  </td>
+        
+                  <td>
+                    <p class='text_center'>Студент</p>
+                  </td>
+                </tr>
+        
+                </tbody>
+              </table>
+            </div>
+        
+          </div>
+        </div>
+      
+        <div class='button_block'>
+          <button class='button'>Отменить</button>
+          <button class='button button_blue'>Сформировать и отправить</button>
         </div>
       </div>
     </div>

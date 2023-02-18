@@ -249,32 +249,101 @@
         </div>
       </div>      
       <div class='section__body full-width'>
-        <h1>Личный кабинет потребителя</h1>
-        <h2>Последние заявки на допуск</h2>
-        <div class='card__wrapper gap-40 appeal_wrapper card_column m0'>
-          <div class='block_row full-width max_1024_column'>
-            <div>
-              <h4><a class='link_no-underline text_body text_blue_200 text_bold'>Заявка № AB-00001</a></h4>
-              <p class='text_small mt_10'>Дата подачи: «28» декабря 2022 года</p>
-              <p class='text_small mt_10'>Дата последних изменений: «28» декабря 2022 года</p>
-              <p class='text_body mt_20'>Работы по предупреждению или ликвидации аварий</p>
-              <p class='text_small mt_20'>Статус заявки: <span
-                class='status status_consideration_yellow'>Зарегистрирована</span></p>
+        <h1>Фамилия Имя Отчество</h1>
+      
+        <div class=''>
+        
+          <div class='block_column full-width'>
+            <div class='card__wrapper full-width block_column relative'>
+              <div class='block_row full-width max_640_column'>
+        
+                <div class='full-width'>
+                  <div class='input_block full-width'>
+                    <label class='required'>Фамилия</label>
+                    <input type='text' name='surname' placeholder='Введите фамилию'>
+                  </div>
+        
+                  <div class='input_block full-width'>
+                    <label class='required'>Отчество</label>
+                    <input type='text' name='patronymic' placeholder='Введите отчество'>
+                  </div>
+        
+                  <div class='input_block full-width'>
+                    <label class='required'>Место рождения</label>
+                    <input type='text' name='birthplace' placeholder='Введите место рождения'>
+                  </div>
+        
+                  <div class='input_block full-width'>
+                    <label class='required'>Адрес регистрации по месту жительства</label>
+                    <input type='text' name='address_registration' placeholder='Введите адрес регистрации'>
+                  </div>
+        
+                  <div class='tab__list mt_20'>
+                    <div class='tab__title tab_active' data-tab-title='passport'>ПАСПОРТ</div>
+                    <div class='tab__title' data-tab-title='certificate'>УДОСТОВЕРЕНИЕ</div>
+                  </div>
+        
+                  <div class='passport-tab-body tab tab_active' data-tab-title='passport'>
+                    <div class='input_block mt_40'>
+                      <label class='required'>Серия и номер паспорта</label>
+                      <div class='block_row justify-start'>
+                        <input class='maxw_110' type="number" name="passport_serial" pattern="[0-9]4" required>
+                        <input class='maxw_110' type="number" name="passport_number" pattern="[0-9]6" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='certificate-tab-body tab' data-tab-title='certificate'>
+                    <div class='input_block mt_40'>
+                      <label class='required'>Серия и номер удостоверения</label>
+                      <div class='block_row justify-start'>
+                        <input class='maxw_110' type="number" name="certificate_serial" required>
+                        <input class='maxw_110' type="number" name="certificate_number" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class='full-width'>
+                  <div class='input_block full-width'>
+                    <label class='required'>Имя</label>
+                    <input type='text' name='name' placeholder='Введите имя'>
+                  </div>
+        
+                  <div class='input_block half-width max_320-full-width'>
+                    <label class='required'>Дата рождения</label>
+                    <input type='date' name='birthday'>
+                  </div>
+        
+                  <div class=' block_row align-center gap-10'>
+                    <div class='mt_10 full-width full-width'>
+                      <label class='required'>Гражданство</label>
+                      <select
+                        class='form-control'
+                        name='custom-select'
+                        id='custom-select'
+                      >
+                        <option value=''>Выбрать..</option>
+                        <option value='Dropdown item 1'>Иное</option>
+                        <option value='Dropdown item 2'>Российская Федерация</option>
+                      </select>
+                    </div>
+                  </div>
+        
+        
+                  <div class='input_block full-width'>
+                    <label class='required'>Должность в компании</label>
+                    <input type='text' name='position' placeholder='Укажите должность'>
+                  </div>
+                </div>
+              </div>
             </div>
-      
-            <div class='full-width word-break'>
-              <p class='title_bg'>Сведения о сертификате ЭП</p>
-              <p class='mt_20 text_note text_med'>Сертификат: 1200608DFC43D60CD586ECB1C8000100608DFC</p>
-              <p class='mt_10 text_note text_med'>Владелец: Сергей Николаевич</p>
-              <p class='mt_10 text_note text_med'>Дата подписания документа: «28» декабря 2022 года
-              </p>
+        
+            <div class='button_block'>
+              <a href='employee-view.html'>
+                <button class='button'>Отменить</button>
+              </a>
+              <button class='button button_blue minw_180'>Сохранить</button>
             </div>
-          </div>
-      
-      
-          <div class='image_align image_justify-end full-width'>
-            <a>Все сообщения</a>
-            <span class='icon icon-arrow__right'></span>
           </div>
         </div>
       </div>
