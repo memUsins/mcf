@@ -99,27 +99,13 @@
       <input type='text' name='text' id='text' placeholder='Placeholder'>
     </div>
     
-    <div class='input_block'>
-      <label for='text1' class='required'>Поле с ошибкой</label>
-      <input type='text' name='text' id='text1' placeholder='Placeholder'>
-    
-      <div class='alert input_error alert__input '>
-        <img src='../assets/images/message__picket.svg'>
-    
-        <div class='alert__block'>
-          <div class='alert__info alert__info_error full-width'>
-            Error text
-          </div>
-        </div>
-      </div>
-    </div>
     
     <div class='alert input_block'>
       <label for='text2' class='required'>Поле с подсказкой и наведением</label>
       <input type='text' name='text' id='text2' placeholder='Placeholder'>
     
-      <div class='alert__input alert__input_hint'>
-        <img src='../assets/images/message__picket.svg'>
+      <div class='alert__input alert__input'>
+        <img class='alert__view' src='../assets/images/message__picket.svg'>
         <div class='alert__block'>
           <div class='alert__info full-width'>
             Если работы планируются на выходной или праздничный день, обязательно приложите разрешение от руководства
@@ -128,6 +114,22 @@
         </div>
       </div>
     </div>
+    
+    <div class='input_block'>
+      <label for='text1' class='required'>Поле с ошибкой</label>
+      <input type='text' name='text' id='text1' placeholder='Placeholder'>
+    
+      <div class='alert input_error alert__input'>
+        <img class='alert__info alert_show' src='../assets/images/attention_alert.svg'>
+    
+        <div class='alert__block'>
+          <div class='alert__info alert_show alert__info_error full-width'>
+            Error text
+          </div>
+        </div>
+      </div>
+    </div>
+    
     
     
     <!-- UI Input file -->
@@ -382,6 +384,14 @@
     </script>  <a href='auth-page.html' class='input_block'>Вернуться домой!!</a>
   </div>
   
+  <div class='attention_list'>
+    <div class='attention__wrapper'>
+      <div class='attention'>
+        <p>Error text</p>
+        <span class='icon icon-close attention__close'></span>
+      </div>
+    </div>
+  </div>
   
 
   <footer>

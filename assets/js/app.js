@@ -327,6 +327,28 @@ alertCloseButtons.forEach(button => {
   const parent = button.closest('.alert');
   button.addEventListener('click', e => parent.remove());
 });
+let attentionCloseButtons = document.querySelectorAll('.attention .attention__close');
+attentionCloseButtons.forEach(button => {
+  const parent = button.closest('.attention');
+  button.addEventListener('click', e => parent.remove());
+});
+
+// let attention = document.querySelector('.attention');
+
+// window.addEventListener('scroll', (e)=> {
+//
+//   console.log(attention.getBoundingClientRect());
+//
+//   if (attention.getBoundingClientRect().top > -97 && attention.getBoundingClientRect().top < 0) {
+//     attention.style.top = '97px';
+//     attention.style.position = 'absolute';
+//   }
+//   else if (attention.getBoundingClientRect().y < -10){
+//     attention.style.top = '0px';
+//     attention.style.position = 'fixed';
+//   }
+//
+// })
 const dropdownClass = 'dropdown';
 const dropdownActiveClass = 'dropdown_active';
 const dropdownItemClass = 'dropdown__item';
